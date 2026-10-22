@@ -43,3 +43,11 @@
  if(m){m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('x'))m.classList.remove('open')});
   m.querySelector('form').addEventListener('submit',function(e){e.preventDefault();alert('Form not connected yet (TODO).')})}
 })();
+// wave 3: dotted trail draws itself on scroll
+(function(){var w=document.querySelector('.trail-wrap');if(!w)return;var d=w.querySelector('.trail-draw');
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){d.style.strokeDashoffset=0;return}
+ var raf=0;function up(){raf=0;var r=w.getBoundingClientRect(),h=innerHeight,p=(h*0.95-r.top)/(h*0.55);p=Math.max(0,Math.min(1,p));d.style.strokeDashoffset=(1-p).toFixed(4)}
+ addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(up)},{passive:true});addEventListener('resize',up);up()})();
+// wave 3: platform arrows draw in when visible
+(function(){var a=document.querySelectorAll('.pw-arrow');if(!a.length)return;if(!('IntersectionObserver' in window)){[].forEach.call(a,function(e){e.classList.add('in')});return}
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.6});[].forEach.call(a,function(e){io.observe(e)})})();
