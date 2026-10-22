@@ -328,3 +328,11 @@ img{max-width:100%;display:block}a{color:inherit}
  .refband .btn:not(.ghost){background:#fff!important;color:var(--green2)!important;border-color:#fff!important}
  .refband .btn.ghost{background:transparent!important;color:#fff!important;border-color:#fff!important}
 }
+/* mobile polish b 2026-10-22: centered refer band, no edge bleed */
+@media(max-width:768px){
+ html,body{overflow-x:hidden}
+ .trail-wrap{margin:0 20px!important;padding:22px 0!important;box-sizing:border-box;overflow:hidden;border-radius:30px}
+ .trail{overflow:hidden!important}
+ .trail-wrap .refer-band{margin:0!important;width:100%;box-sizing:border-box;padding:20px 22px!important}
+ .refer-band .btn{width:100%;justify-content:center;box-sizing:border-box}
+}
