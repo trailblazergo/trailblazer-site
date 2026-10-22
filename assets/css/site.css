@@ -299,3 +299,32 @@ img{max-width:100%;display:block}a{color:inherit}
 .hero-home h1+p,.hero-about h1+p{min-height:84px}
 @media(max-width:700px){.hero-home,.hero-about{min-height:830px}.hero-home h1,.hero-about h1{min-height:252px}.hero-home h1+p,.hero-about h1+p{min-height:140px}}
 @media(min-width:701px){.pslide .in{padding-left:40px;gap:28px}.pslide .lg{width:140px;height:140px}.pslide p{font-size:15.5px}}
+/* about: footer-style linkedin under founder bio */
+.soc.li{display:flex;gap:10px;margin-top:10px}.soc.li img{width:23px;height:23px;display:block}
+/* mobile polish 2026-10-22 (mobile only) */
+@media(max-width:768px){
+ .wrap,.legal,.trusted-card,.pw-feat{padding-left:20px!important;padding-right:20px!important;box-sizing:border-box}
+ .sec>.eyebrow-g,.sec>h2,.sec>p,.sec>.center{padding-left:20px;padding-right:20px;box-sizing:border-box}
+ .h50,.hero-in h1{font-size:30px!important;line-height:36px!important}
+ .sec-partners .sec-head,.mission h2,.about-title h2{font-size:28px!important;line-height:34px!important}
+ .pslide .lg{width:110px!important;height:110px!important;padding:14px;box-sizing:border-box}
+ .pslide .lg img{width:100%!important;height:100%!important;max-width:none;max-height:none;object-fit:contain}
+ .refband{padding:40px 0!important;min-height:0!important}
+ .refband .wrap{grid-template-columns:1fr!important;gap:22px!important}
+ .refband .k{font-size:14px!important}
+ .refband h2{font-size:28px!important;line-height:34px!important;margin:6px 0 12px!important}
+ .refband p{font-size:16px!important;line-height:23px!important}
+ .refband .ctas{justify-content:flex-start!important;gap:12px!important}
+ .refband .btn{width:100%;max-width:320px;height:46px;font-size:16px;box-sizing:border-box}
+ .refband .ln{left:auto!important;right:-120px!important;top:auto!important;bottom:-120px!important;width:360px!important}
+ .refcard{padding:20px!important}
+}
+@media(max-width:768px){
+ .refcard{background:transparent!important;color:#fff!important;border-radius:0!important;padding:0!important}
+ .refcard .k2{color:var(--bright)!important;font-size:14px!important}
+ .refcard h3{font-size:20px!important;color:#fff}
+ .refcard p{font-size:16px!important;line-height:23px!important;color:#fff}
+ .refband .btn,.refcard .btn{width:100%!important;max-width:320px!important;height:46px!important;font-size:16px!important;letter-spacing:.04em!important;border-radius:30px!important;padding:0 20px!important}
+ .refband .btn:not(.ghost){background:#fff!important;color:var(--green2)!important;border-color:#fff!important}
+ .refband .btn.ghost{background:transparent!important;color:#fff!important;border-color:#fff!important}
+}
