@@ -27,6 +27,16 @@
   set(false);
   var auto=c.getAttribute('data-autoplay');if(auto){var tm=setInterval(function(){if(!c.matches(':hover'))go(i+1)},+auto)}
  });
+ // hero slideshow (Wix: 3 slides, 5s cycle, 1s horizontal slide, newest enters from right)
+ [].forEach.call(document.querySelectorAll('[data-slideshow]'),function(w){
+  var im=w.querySelectorAll('img'),k=0,ms=+w.getAttribute('data-slideshow');if(im.length<2)return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  setInterval(function(){if(document.hidden)return;var a=im[k],b=im[k=(k+1)%im.length];
+   b.classList.remove('anim','out');void b.offsetWidth;b.classList.add('anim');a.classList.add('anim','out');a.classList.remove('on');b.classList.add('on');
+   setTimeout(function(){a.classList.remove('anim','out')},1050)},ms)});
+ // nav active state
+ var here=location.pathname.replace(/index\.html$/,'');
+ [].forEach.call(document.querySelectorAll('.nav a:not(.btn)'),function(a){var p=new URL(a.href).pathname;if(p===here){a.classList.add('on');a.setAttribute('aria-current','page')}});
  // TODO(form): referral modal is layout-only; wire to a real backend (Formspree/Netlify/Apps Script) before launch
  var m=document.getElementById('refer');
  [].forEach.call(document.querySelectorAll('[data-open-refer]'),function(a){a.addEventListener('click',function(e){e.preventDefault();m.classList.add('open')})});

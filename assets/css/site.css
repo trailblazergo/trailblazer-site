@@ -14,9 +14,8 @@ img{max-width:100%;display:block}a{color:inherit}
 .hdr .logo img{width:270px;height:auto}
 .nav{display:flex;align-items:center;gap:6px}
 .nav a{font-family:var(--f-work);font-weight:600;font-size:17px;text-decoration:none;padding:0 10px;color:var(--ink)}
-.nav a.on,.nav a:hover{color:var(--green2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f-flex);font-weight:700;font-size:17px;letter-spacing:.1em;text-decoration:none;border-radius:30px;padding:0 28px;height:40px;border:2px solid transparent;cursor:pointer;transition:filter .2s,background .2s}
-.btn:hover{filter:brightness(1.12)}
+.nav a:not(.btn){transition:color .4s}.nav a:not(.btn):hover{color:#7b3d0e}.nav a.on:not(.btn){color:var(--green2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f-flex);font-weight:700;font-size:17px;letter-spacing:.1em;text-decoration:none;border-radius:30px;padding:0 28px;height:40px;border:2px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
 .btn.dk{background:var(--green);color:#fff}.btn.g{background:var(--green2);color:#fff}
 .btn.w{background:#fff;color:var(--green2)}.btn.wk{background:#fff;color:var(--ink);height:46px}
 .btn.ghost{background:transparent;color:#fff;border-color:#fff;height:46px}
@@ -26,7 +25,10 @@ img{max-width:100%;display:block}a{color:inherit}
 .burger span{display:block;height:3px;background:var(--ink);margin:6px 8px;border-radius:2px}
 /* hero home */
 .hero-home{position:relative;background:#000;min-height:480px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
-.hero-home>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-home>img,.hero-slides,.hero-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-slides{overflow:hidden}.hero-slides img{transform:translateX(100%);visibility:hidden}
+.hero-slides img.on{transform:none;visibility:visible}.hero-slides img.out{transform:translateX(-100%);visibility:visible}
+.hero-slides img.anim{transition:transform 1s cubic-bezier(.65,0,.35,1)}
 .hero-home:before{content:"";position:absolute;inset:0;background:rgba(8,102,31,.45);z-index:1}
 .hero-home .in{position:relative;z-index:2;max-width:980px;padding:60px 20px}
 .hero-home h1{font-family:var(--f-work);font-weight:600;font-size:50px;line-height:60px;margin:0 0 16px}
@@ -211,3 +213,17 @@ img{max-width:100%;display:block}a{color:inherit}
 }
 .hs-grid{max-width:1240px;display:grid;grid-template-columns:minmax(0,860px) 366px;gap:20px;align-items:center}
 @media(max-width:1000px){.hs-grid{grid-template-columns:1fr}.hs-grid img{height:auto!important;aspect-ratio:366/483;max-width:420px;margin:0 auto}}
+
+/* hover states, colors from Wix computed :hover rules */
+.btn{box-sizing:border-box}
+.btn.dk:hover{background:#fff;color:var(--green);border:2px solid var(--green)}
+.btn.g:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.btn.g.inv:hover{background:#fff;color:var(--green2);border-color:var(--green2)}
+.hero-home .btn.w:hover,.hero-about .btn:hover,.btn.wk.to-ghost:hover{background:transparent;color:#fff;border-color:#fff}
+.refer-band .btn:hover{background:var(--green);color:#fff;border-color:#fff}
+.btn.wk:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.btn.ghost:hover{background:#fff;color:var(--ink);border-color:var(--green)}
+.btn:focus-visible{outline:2px solid var(--green2);outline-offset:2px}
+.modal.open{animation:mfade .3s ease}.modal.open .box{animation:mpop .3s ease}
+@keyframes mfade{from{opacity:0}}@keyframes mpop{from{transform:translateY(12px);opacity:0}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
