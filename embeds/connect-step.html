@@ -1,0 +1,189 @@
+<meta name="robots" content="noindex"><base target="_top">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --green: #0b962e;
+      --dark-green: #08661f;
+      --black: #111111;
+      --charcoal: #2a2a2a;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+      color: var(--black);
+      font-family:
+        "Google Sans Flex",
+        "Google Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+    .connect-step {
+      width: 100%;
+      padding: 24px 20px;
+      background: transparent;
+    }
+
+    .connect-step__content {
+      width: min(500px, 100%);
+      margin: 0 auto;
+    }
+
+    .connect-step__eyebrow {
+      margin: 0 0 9px;
+      color: var(--green);
+      font-size: 11px;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .connect-step__title {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      font-weight: 700;
+    }
+
+    .connect-step__title span {
+      color: var(--green);
+    }
+
+    .connect-step__copy {
+      margin: 15px 0 0;
+      color: var(--charcoal);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .connect-step__list {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 21px 0 0;
+      list-style: none;
+    }
+
+    .connect-step__list li {
+      display: grid;
+      grid-template-columns: 19px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--charcoal);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .connect-step__check {
+      display: grid;
+      place-items: center;
+      width: 19px;
+      height: 19px;
+      margin-top: 1px;
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--white);
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    @media (max-width: 560px) {
+      html,
+      body {
+        overflow: visible;
+      }
+
+      .connect-step {
+        padding: 20px 16px;
+      }
+
+      .connect-step__title {
+        font-size: 32px;
+      }
+
+      .connect-step__copy {
+        font-size: 14px;
+      }
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="connect-step">
+    <div class="connect-step__content">
+
+      <p class="connect-step__eyebrow">
+        Mentorship
+      </p>
+
+      <h2 class="connect-step__title">
+        Connect students with mentors who
+        <span>understand their path.</span>
+      </h2>
+
+      <p class="connect-step__copy">
+        Students can search for peer mentors based on the experiences and
+        interests that matter most to them, then request one-on-one guidance
+        when they need additional support.
+      </p>
+
+      <ul class="connect-step__list">
+        <li>
+          <span class="connect-step__check">✓</span>
+          <span>
+            Search mentors by college, major, career interest, background,
+            and availability
+          </span>
+        </li>
+
+        <li>
+          <span class="connect-step__check">✓</span>
+          <span>
+            Connect students with relatable college students and recent
+            graduates
+          </span>
+        </li>
+
+        <li>
+          <span class="connect-step__check">✓</span>
+          <span>
+            Offer personalized one-on-one or small-group mentoring sessions
+          </span>
+        </li>
+
+        <li>
+          <span class="connect-step__check">✓</span>
+          <span>
+            Activate alumni and community members as mentors for your students
+          </span>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+</body>
+</html>

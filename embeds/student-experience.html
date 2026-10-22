@@ -1,0 +1,173 @@
+<meta name="robots" content="noindex"><base target="_top">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --green: #0b962e;
+      --dark-green: #08661f;
+      --black: #111111;
+      --charcoal: #2a2a2a;
+      --white: #ffffff;
+      --border: #d7e7db;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+      color: var(--black);
+      font-family:
+        "Google Sans Flex",
+        "Google Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+    .student-experience {
+      width: 100%;
+      padding: 26px 22px;
+      background: transparent;
+    }
+
+    .student-experience__content {
+      width: min(470px, 100%);
+      margin: 0 auto;
+    }
+
+    .student-experience__label {
+      margin: 0 0 9px;
+      color: var(--green);
+      font-size: 11px;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .student-experience__title {
+      margin: 0;
+      font-size: clamp(29px, 4vw, 39px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      font-weight: 700;
+    }
+
+    .student-experience__title span {
+      color: var(--green);
+    }
+
+    .student-experience__copy {
+      margin: 16px 0 0;
+      color: var(--charcoal);
+      font-size: 15px;
+      line-height: 1.56;
+    }
+
+    .student-experience__list {
+      display: grid;
+      gap: 11px;
+      padding: 0;
+      margin: 21px 0 0;
+      list-style: none;
+    }
+
+    .student-experience__list li {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 9px;
+      align-items: start;
+      color: var(--charcoal);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .student-experience__check {
+      display: grid;
+      place-items: center;
+      width: 18px;
+      height: 18px;
+      margin-top: 1px;
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 560px) {
+      html,
+      body {
+        overflow: visible;
+      }
+
+      .student-experience {
+        padding: 22px 18px;
+      }
+
+      .student-experience__title {
+        font-size: 32px;
+      }
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="student-experience">
+    <div class="student-experience__content">
+
+      <p class="student-experience__label">
+        Student experience
+      </p>
+
+      <h3 class="student-experience__title">
+        Help students discover and compare
+        <span>best-fit colleges.</span>
+      </h3>
+
+      <p class="student-experience__copy">
+        Students create a profile and receive personalized college
+        recommendations based on their interests, priorities, and goals.
+        They can explore options, compare schools, and build a shortlist
+        in one place.
+      </p>
+
+      <ul class="student-experience__list">
+        <li>
+          <span class="student-experience__check">✓</span>
+          <span>Personalized college recommendations</span>
+        </li>
+
+        <li>
+          <span class="student-experience__check">✓</span>
+          <span>College comparison and shortlist tools</span>
+        </li>
+
+        <li>
+          <span class="student-experience__check">✓</span>
+          <span>
+            Access to relatable peer mentors when additional support is needed
+          </span>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<meta name="robots" content="noindex"><base target="_top">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --green: #0b962e;
+      --dark-green: #08661f;
+      --black: #111111;
+      --charcoal: #2a2a2a;
+      --white: #ffffff;
+      --soft-green: #e0fce7;
+      --soft-yellow: #fdfbd4;
+      --border: #d7e7db;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+      color: var(--black);
+      font-family:
+        "Google Sans Flex",
+        "Google Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+    .mentor-boxes {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 18px 20px;
+      background: transparent;
+    }
+
+    .mentor-boxes__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      width: min(920px, 100%);
+      align-items: start;
+    }
+
+    .role-panel {
+      width: 100%;
+      padding: 25px 27px;
+      border-radius: 24px;
+    }
+
+    .role-panel--duties {
+      background: var(--dark-green);
+      color: var(--white);
+    }
+
+    .role-panel--fit {
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .role-panel__label {
+      margin: 0 0 7px;
+      color: #72e58a;
+      font-size: 10px;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .role-panel--fit .role-panel__label {
+      color: var(--green);
+    }
+
+    .role-panel h3 {
+      margin: 0 0 17px;
+      font-size: 21px;
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      font-weight: 700;
+    }
+
+    .role-list {
+      display: grid;
+      gap: 13px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .role-list li {
+      display: grid;
+      grid-template-columns: 25px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .role-list__number,
+    .role-list__check {
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .role-list__number {
+      background: var(--white);
+      color: var(--dark-green);
+    }
+
+    .role-list__check {
+      background: var(--soft-green);
+      color: var(--dark-green);
+    }
+
+    .role-list h4 {
+      margin: 0 0 3px;
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .role-list p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.42;
+    }
+
+    .role-panel--duties .role-list p {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .role-panel--fit .role-list p {
+      color: var(--charcoal);
+    }
+
+    .role-panel__note {
+      margin-top: 16px;
+      padding: 11px 13px;
+      border-radius: 12px;
+      background: var(--soft-yellow);
+      color: var(--dark-green);
+      font-size: 11px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    .mentor-boxes__benefits {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 2px;
+    }
+
+    .mentor-boxes__benefit {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 31px;
+      padding: 0 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--dark-green);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .mentor-boxes__dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    @media (max-width: 760px) {
+      html,
+      body {
+        overflow: visible;
+      }
+
+      .mentor-boxes__grid {
+        grid-template-columns: 1fr;
+        width: min(520px, 100%);
+      }
+
+      .mentor-boxes__benefits {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mentor-boxes {
+        padding: 14px;
+      }
+
+      .role-panel {
+        padding: 22px;
+        border-radius: 20px;
+      }
+
+      .mentor-boxes__benefits {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .mentor-boxes__benefit {
+        justify-content: center;
+      }
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="mentor-boxes">
+    <div class="mentor-boxes__grid">
+
+      <article class="role-panel role-panel--duties">
+        <p class="role-panel__label">
+          What you’ll do
+        </p>
+
+        <h3>
+          Help students make clearer college decisions
+        </h3>
+
+        <ul class="role-list">
+          <li>
+            <span class="role-list__number">1</span>
+
+            <div>
+              <h4>Meet one-on-one</h4>
+
+              <p>
+                Connect virtually with first-generation high school students.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="role-list__number">2</span>
+
+            <div>
+              <h4>Share real perspective</h4>
+
+              <p>
+                Talk honestly about applications, majors, campus life, and
+                what you wish you had known.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="role-list__number">3</span>
+
+            <div>
+              <h4>Guide the next step</h4>
+
+              <p>
+                Help students compare options, prepare questions, and move
+                forward confidently.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <article class="role-panel role-panel--fit">
+        <p class="role-panel__label">
+          Who should apply
+        </p>
+
+        <h3>
+          You may be a great fit if you are:
+        </h3>
+
+        <ul class="role-list">
+          <li>
+            <span class="role-list__check">✓</span>
+
+            <div>
+              <h4>A current college student</h4>
+
+              <p>
+                You can share recent, firsthand experience.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="role-list__check">✓</span>
+
+            <div>
+              <h4>Reliable and encouraging</h4>
+
+              <p>
+                You listen well, communicate clearly, and follow through.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="role-list__check">✓</span>
+
+            <div>
+              <h4>Comfortable being honest</h4>
+
+              <p>
+                You can discuss both your successes and challenges.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="role-list__check">✓</span>
+
+            <div>
+              <h4>Motivated to support first-generation students</h4>
+
+              <p>
+                You want to make the college journey feel clearer and less
+                overwhelming.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <div class="mentor-boxes__benefits">
+        <span class="mentor-boxes__benefit">
+          <span class="mentor-boxes__dot"></span>
+          Paid $20 per hour
+        </span>
+
+        <span class="mentor-boxes__benefit">
+          <span class="mentor-boxes__dot"></span>
+          Remote sessions
+        </span>
+
+        <span class="mentor-boxes__benefit">
+          <span class="mentor-boxes__dot"></span>
+          Flexible scheduling
+        </span>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

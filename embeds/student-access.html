@@ -1,0 +1,297 @@
+<meta name="robots" content="noindex"><base target="_top">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --green: #0b962e;
+      --dark-green: #08661f;
+      --black: #111111;
+      --charcoal: #2a2a2a;
+      --white: #ffffff;
+      --soft-green: #e0fce7;
+      --soft-yellow: #fdfbd4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+      color: var(--black);
+      font-family:
+        "Google Sans Flex",
+        "Google Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+    .student-access {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 28px 8px 28px 0;
+      background: transparent;
+    }
+
+    .student-access__content {
+      width: min(590px, 100%);
+      margin: 0;
+      text-align: left;
+    }
+
+    .student-access__eyebrow {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: 11px;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .student-access__title {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }
+
+    .student-access__title-line {
+      display: block;
+    }
+
+    .student-access__title-line--green {
+      color: var(--green);
+    }
+
+    .student-access__intro {
+      max-width: 560px;
+      margin: 16px 0 0;
+      color: var(--charcoal);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .student-access__options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .access-option {
+      padding: 21px;
+      border-radius: 21px;
+      text-align: left;
+    }
+
+    .access-option--free {
+      background: var(--soft-green);
+    }
+
+    .access-option--mentor {
+      background: var(--soft-yellow);
+    }
+
+    .access-option__label {
+      margin: 0 0 7px;
+      color: var(--green);
+      font-size: 10px;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    .access-option h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      font-weight: 700;
+    }
+
+    .access-option__price {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 6px;
+      margin: -2px 0 12px;
+    }
+
+    .access-option__amount {
+      font-size: 29px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }
+
+    .access-option__period {
+      padding-bottom: 3px;
+      color: var(--charcoal);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .access-option__list {
+      display: grid;
+      gap: 9px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .access-option__list li {
+      display: grid;
+      grid-template-columns: 17px 1fr;
+      gap: 8px;
+      align-items: start;
+      color: var(--charcoal);
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    .access-option__check {
+      display: grid;
+      place-items: center;
+      width: 17px;
+      height: 17px;
+      margin-top: 1px;
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--white);
+      font-size: 9px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      html,
+      body {
+        overflow: visible;
+      }
+
+      .student-access {
+        padding: 24px 17px;
+      }
+
+      .student-access__title {
+        font-size: 38px;
+      }
+
+      .student-access__options {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="student-access">
+    <div class="student-access__content">
+
+      <p class="student-access__eyebrow">
+        Your Trailblazer experience
+      </p>
+
+      <h2 class="student-access__title">
+        <span class="student-access__title-line">
+          Create your profile and explore personlized college matches
+        </span>
+
+        <span class="student-access__title-line student-access__title-line--green">
+          at no cost.
+        </span>
+      </h2>
+
+      <p class="student-access__intro">
+        When you want personal guidance, book a one-on-one session with
+        a college mentor for $25 per hour.
+      </p>
+
+      <div class="student-access__options">
+
+        <article class="access-option access-option--free">
+          <p class="access-option__label">
+            Explore for free
+          </p>
+
+          <h3>
+            Begin building your college list
+          </h3>
+
+          <ul class="access-option__list">
+            <li>
+              <span class="access-option__check">✓</span>
+              <span>Create your student profile</span>
+            </li>
+
+            <li>
+              <span class="access-option__check">✓</span>
+              <span>View personalized college matches</span>
+            </li>
+
+            <li>
+              <span class="access-option__check">✓</span>
+              <span>Compare options based on your goals</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="access-option access-option--mentor">
+          <p class="access-option__label">
+            Mentorship when needed
+          </p>
+
+          <h3>
+            Get personal college guidance
+          </h3>
+
+          <div class="access-option__price">
+            <span class="access-option__amount">$25</span>
+            <span class="access-option__period">per hour</span>
+          </div>
+
+          <ul class="access-option__list">
+            <li>
+              <span class="access-option__check">✓</span>
+              <span>Pay for one session at a time</span>
+            </li>
+
+            <li>
+              <span class="access-option__check">✓</span>
+              <span>No subscription or long-term commitment</span>
+            </li>
+
+            <li>
+              <span class="access-option__check">✓</span>
+              <span>Access mentors after creating your profile</span>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
