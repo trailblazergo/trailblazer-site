@@ -454,3 +454,10 @@ img{max-width:100%;display:block}a{color:inherit}
 @media(max-width:600px){.shot-wrap{padding:40px 0}.ann{font-size:21px;max-width:72%}.ann.l{left:0}.ann.r{right:0}}
 /* r2: arrows bolder */
 .pa-line,.pa-head{stroke-width:3.5}
+
+/* r3: home notebook hero + sticker header CTA */
+.hero-home2 .wrap{max-width:1100px;grid-template-columns:minmax(0,1fr) 380px}
+.hero-home2 .nb-card h1{font-size:44px;line-height:50px}
+@media(max-width:900px){.hero-home2 .wrap{grid-template-columns:1fr}.hero-home2 .nb-card h1{font-size:30px;line-height:36px}}
+header .btn.dk,.nav .btn.dk{border:2px solid #111;box-shadow:3px 4px 0 #111;transform:rotate(-2deg);transition:transform .15s,box-shadow .15s;white-space:nowrap}
+header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;border:2px solid #111;transform:rotate(0) translateY(-2px);box-shadow:4px 6px 0 #111}
