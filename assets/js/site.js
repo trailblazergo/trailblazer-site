@@ -51,3 +51,4 @@
 // wave 3: platform arrows draw in when visible
 (function(){var a=document.querySelectorAll('.pw-arrow');if(!a.length)return;if(!('IntersectionObserver' in window)){[].forEach.call(a,function(e){e.classList.add('in')});return}
  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.6});[].forEach.call(a,function(e){io.observe(e)})})();
+document.addEventListener('click',function(e){var a=e.target.closest('a.btn,button.btn,a[href*="app.trailblazergo.com"]');if(a&&window.gtag)gtag('event','button_click',{button_text:(a.textContent||'').trim().slice(0,80),page_path:location.pathname});});
