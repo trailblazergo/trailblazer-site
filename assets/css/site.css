@@ -422,3 +422,13 @@ img{max-width:100%;display:block}a{color:inherit}
 .polaroid figcaption{font-family:Caveat,cursive;font-weight:700;font-size:30px;color:var(--green);text-align:center;padding:12px 0 16px}
 .polaroid .pt{position:absolute;top:-10px;width:78px;height:24px;background:rgba(250,204,21,.6)}.polaroid .pt.l{left:-22px;transform:rotate(-38deg)}.polaroid .pt.r{right:-22px;transform:rotate(38deg)}
 @media(max-width:900px){.hero-hs{padding:36px 0 48px}.hero-hs .wrap{grid-template-columns:1fr;gap:44px}.nb-card{padding:28px 20px 24px 40px;transform:none}.nb-card:before{left:24px}.nb-card h1{font-size:32px;line-height:38px}.polaroid{max-width:300px;margin:0 auto}}
+
+/* w1023d */
+.refband .ln{top:50%!important;bottom:auto!important;transform:translateY(-50%)}
+.hs-cta-c{justify-content:center;margin-top:26px;gap:10px;align-items:flex-end}
+.hs-cta-c .btn{height:52px;font-size:18px;box-shadow:3px 4px 0 #111;border:2px solid #111;transform:rotate(-1deg);transition:transform .15s,box-shadow .15s}
+.hs-cta-c .btn:hover{transform:rotate(0) translateY(-2px);box-shadow:4px 6px 0 #111}
+.hs-note.r{text-align:right;transform:rotate(-6deg);margin-bottom:22px}
+.hs-arrow{font-size:40px;line-height:1;color:var(--green);transform:rotate(-20deg) scaleX(-1);margin:0 2px 18px -2px;font-weight:700}
+.hero-mentor .hs-scr{max-width:470px;line-height:1.05}
+@media(max-width:600px){.hs-cta-c{flex-direction:column;align-items:center;gap:4px}.hs-cta-c .hs-note.r{text-align:center;margin:0}.hs-arrow{margin:0;transform:rotate(10deg)}}
