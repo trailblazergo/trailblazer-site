@@ -41,7 +41,7 @@
  var m=document.getElementById('refer');
  [].forEach.call(document.querySelectorAll('[data-open-refer]'),function(a){a.addEventListener('click',function(e){e.preventDefault();m.classList.add('open')})});
  if(m){m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('x'))m.classList.remove('open')});
-  m.querySelector('form').addEventListener('submit',function(e){e.preventDefault();alert('Form not connected yet (TODO).')})}
+  var f=m.querySelector('form');if(f)f.addEventListener('submit',function(e){e.preventDefault();alert('Form not connected yet (TODO).')})}
 })();
 // wave 3: dotted trail draws itself on scroll
 (function(){var w=document.querySelector('.trail-wrap');if(!w)return;var d=w.querySelector('.trail-draw');
