@@ -397,3 +397,28 @@ img{max-width:100%;display:block}a{color:inherit}
 .hero-in .kicker{margin-top:0}
 @media(max-width:768px){.hero-ab h1{font-size:28px!important;line-height:34px!important}.hero-ab p{font-size:16px;line-height:22px}.hero-ab .ctas{display:grid;grid-template-columns:1fr 1fr;gap:8px!important}.hero-ab .ctas .btn{width:auto;max-width:none;padding:0 8px;font-size:14px}.hero-ab .ctas .btn:last-child{grid-column:1/-1}}
 @media(max-width:768px){.hero-in{min-height:880px!important;display:flex;flex-direction:column}.hero-in .wrap{flex:1;display:flex!important;flex-direction:column;justify-content:space-between;gap:24px}}
+/* wave 1023c */
+.ask-card{transition:background-color .5s ease}
+.ask-schools img,.ask-logo{object-fit:contain!important;background:#fff;box-sizing:border-box;padding:5px}.ask-logo{padding:7px}
+.scrib{width:fit-content;max-width:100%;margin:0 0 14px}
+.center .scrib,.sec-head .scrib,.h50.center .scrib{margin-left:auto;margin-right:auto}
+.refband{padding:22px 0!important;min-height:0!important}
+@media(max-width:768px){.refband{padding:26px 0!important}}
+/* HS hero combo (mint band + notebook card + polaroid) */
+.hero-hs{background:var(--mint);border-bottom:3px dashed #9fd8ae;padding:56px 0 64px;overflow:hidden}
+.hero-hs .wrap{display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:center;max-width:1040px}
+.nb-card{position:relative;background:#fff repeating-linear-gradient(transparent 0 31px,#dbe7f3 31px 32px);background-position:0 18px;border:2px solid #111;border-radius:6px;box-shadow:4px 5px 0 #111;padding:34px 34px 30px 58px;transform:rotate(-.8deg)}
+.nb-card:before{content:"";position:absolute;top:0;bottom:0;left:38px;width:2px;background:#f3b4b4}
+.nb-tape{position:absolute;top:-15px;left:50%;width:110px;height:28px;margin-left:-55px;background:rgba(250,204,21,.6);transform:rotate(-3deg)}
+.nb-card .kicker{margin:0 0 4px}
+.hs-scr{font-family:Caveat,cursive;font-weight:700;font-size:28px;line-height:1;color:var(--green);transform:rotate(-3deg);transform-origin:left;margin:0 0 14px;width:fit-content}
+.nb-card h1{font-family:var(--f-flex);font-weight:700;font-size:48px;line-height:52px;margin:0 0 18px}
+.nb-card>p:not(.kicker):not(.hs-scr){font-size:18px;line-height:25px;margin:0 0 24px}
+.hs-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.hs-cta .btn{height:46px}
+.hs-note{font-family:Caveat,cursive;font-weight:700;font-size:26px;line-height:.95;color:var(--green);transform:rotate(-4deg)}
+.hs-note small{font-size:21px;color:#111}
+.polaroid{position:relative;margin:0;background:#fff;padding:14px 14px 0;box-shadow:0 18px 36px -14px rgba(8,102,31,.45),0 4px 10px rgba(0,0,0,.12);transform:rotate(3deg)}
+.polaroid img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.polaroid figcaption{font-family:Caveat,cursive;font-weight:700;font-size:30px;color:var(--green);text-align:center;padding:12px 0 16px}
+.polaroid .pt{position:absolute;top:-10px;width:78px;height:24px;background:rgba(250,204,21,.6)}.polaroid .pt.l{left:-22px;transform:rotate(-38deg)}.polaroid .pt.r{right:-22px;transform:rotate(38deg)}
+@media(max-width:900px){.hero-hs{padding:36px 0 48px}.hero-hs .wrap{grid-template-columns:1fr;gap:44px}.nb-card{padding:28px 20px 24px 40px;transform:none}.nb-card:before{left:24px}.nb-card h1{font-size:32px;line-height:38px}.polaroid{max-width:300px;margin:0 auto}}
