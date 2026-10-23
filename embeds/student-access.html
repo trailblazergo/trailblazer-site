@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --green: #0b962e;
@@ -202,7 +203,17 @@
     body::-webkit-scrollbar {
       display: none;
     }
-  .cmp{margin-top:10px;margin-bottom:18px;padding-top:10px;border-top:1px solid #e5e5e5;display:grid;gap:6px}.cmp-row{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;border-radius:9px;font-size:12px}.cmp-row b{font-size:13px}.cmp-row.them{background:#f3f3f3;color:#666}.cmp-row.them b{text-decoration:line-through;text-decoration-color:#b33}</style>
+  .cmp{margin-top:10px;margin-bottom:18px;padding-top:10px;border-top:1px solid #e5e5e5;display:grid;gap:6px}.cmp-row{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;border-radius:9px;font-size:12px}.cmp-row b{font-size:13px}.cmp-row.them{background:#f3f3f3;color:#666}.cmp-row.them b{text-decoration:line-through;text-decoration-color:#b33}
+.student-access__options{gap:22px;margin-top:30px}
+.access-option{border:2px solid #111!important;border-radius:6px!important;box-shadow:3px 4px 0 #111;position:relative;padding:22px 20px 18px}
+.access-option::before{content:"";position:absolute;top:-14px;left:50%;width:90px;height:26px;margin-left:-45px;background:rgba(250,204,21,.55);transform:rotate(-3deg)}
+.access-option--free{transform:rotate(-1deg)}.access-option--mentor{transform:rotate(.7deg)}
+.access-option__label{font-family:Caveat,cursive;font-size:22px;letter-spacing:0;text-transform:none;color:#08661f;font-weight:700}
+.access-option__check{background:none;color:#0b962e;font-family:Caveat,cursive;font-size:22px;width:17px;height:17px}
+.access-option__list li{font-size:13px}
+.student-access{padding-left:6px;padding-right:12px}
+@media (max-width:600px){.access-option{transform:none!important}.student-access{padding:24px 17px}}
+</style>
 </head>
 
 <body>
@@ -215,7 +226,7 @@
 
       <h2 class="student-access__title">
         <span class="student-access__title-line">
-          Create your profile and explore personlized college matches
+          Create your profile and explore personalized college matches
         </span>
 
         <span class="student-access__title-line student-access__title-line--green">

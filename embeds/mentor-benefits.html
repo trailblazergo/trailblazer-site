@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --green: #0b962e;
@@ -232,7 +233,20 @@
     body::-webkit-scrollbar {
       display: none;
     }
-  </style>
+  
+/* notepad style (matches home) */
+.mentor-boxes{padding:30px 20px 18px}
+.role-panel{border:2px solid #111!important;border-radius:6px!important;box-shadow:3px 4px 0 #111;position:relative;}
+.role-panel::before{content:"";position:absolute;top:-14px;left:50%;width:90px;height:26px;margin-left:-45px;background:rgba(250,204,21,.55);transform:rotate(-3deg)}
+.role-panel--duties{background:#e0fce7!important;color:#111!important;transform:rotate(-1deg)}
+.role-panel--fit{background:#fdfbd4!important;transform:rotate(.7deg)}
+.role-panel__label,.role-panel--fit .role-panel__label{font-family:Caveat,cursive;font-size:24px;letter-spacing:0;text-transform:none;color:#08661f!important;font-weight:700}
+.role-panel--duties .role-list p{color:#333!important}
+.role-list__number{background:#0b962e!important;color:#fff!important}
+.role-list__check{background:none!important;color:#0b962e!important;font-family:Caveat,cursive;font-size:26px!important}
+.role-panel__note{background:#fff!important;border:2px dashed #0b962e}
+@media(max-width:700px){.role-panel{transform:none!important}}
+</style>
 </head>
 
 <body>

@@ -262,7 +262,13 @@
     }
   
     /* wave 1022: slightly larger checks + text */ .value-card__details li{grid-template-columns:21px 1fr;gap:10px;font-size:16px} .value-card__check{width:21px;height:21px;font-size:12px}
-  </style>
+  
+.value-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;border:1.5px solid transparent}
+.value-card:nth-child(2){border:1.5px solid var(--border)}
+.value-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(39,184,179,.12);border-color:#0b962e}
+@media(prefers-reduced-motion:reduce){.value-card{transition:none}.value-card:hover{transform:none}}
+.partner-value{padding-top:6px}
+</style>
 </head>
 
 <body>
