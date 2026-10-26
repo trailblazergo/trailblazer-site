@@ -565,3 +565,4 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 .hero-home2 .ab-note{--fbc:106px}.hero-ab2 .ab-note{--fbc:95px}
 @media(max-width:900px){.hero-hs .ab-note{--fbc:50%!important;margin:22px 0 0!important}}
 @media(max-width:480px){.hero-hs .ab-note{font-size:22px!important}}
+@media (max-width:900px){/* w10 sticky above shot */.pw-feat.rev .sn{order:1!important}.pw-feat.rev .shot-wrap{order:2!important}}
