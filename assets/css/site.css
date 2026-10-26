@@ -556,3 +556,7 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 /* wave6 */.ab-ctas .btn:nth-child(1),.ab-ctas .btn:nth-child(1):hover{background:#08661f}.ab-ctas .btn:nth-child(2),.ab-ctas .btn:nth-child(2):hover{background:#0b962e}
 .refband .refcard .btn.g,.refband .refcard .btn.g:hover{background:var(--green)!important}
 .hs-cta.hs-up{gap:22px}
+/* wave9: refband buttons white on dark green band */
+.refband .btn,.refband .btn.ghost,.refband .btn:not(.ghost),.refband .refcard .btn.g,.refband .btn:hover,.refband .btn.ghost:hover,.refband .refcard .btn.g:hover{background:#fff!important;color:var(--green)!important;border:2px solid #111!important}
+/* wave9: partner curly arrows back to pre-wave5 size */
+@media(max-width:1000px){.pw-arrow{max-width:420px;margin:-6px auto}}
