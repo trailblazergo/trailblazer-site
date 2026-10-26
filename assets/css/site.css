@@ -552,3 +552,4 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 @media(max-width:1000px){.platform .pw-feat{gap:14px}.platform .pw-feat.rev .sn{order:2}.pw-arrow{max-width:220px;margin:4px auto}}
 @media(max-width:600px){.sn{padding:12px 12px 10px}.sn-scr{font-size:22px}.platform .pw-feat{gap:10px;padding-top:6px;padding-bottom:6px}}
 @media(max-width:480px){.hs-note.up{font-size:22px}.hs-note.up small{font-size:18px}}
+@media(min-width:701px){.ab-note{width:520px;max-width:100%;text-align:center;margin-left:0!important}}
