@@ -553,3 +553,6 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 @media(max-width:600px){.sn{padding:12px 12px 10px}.sn-scr{font-size:22px}.platform .pw-feat{gap:10px;padding-top:6px;padding-bottom:6px}}
 @media(max-width:480px){.hs-note.up{font-size:22px}.hs-note.up small{font-size:18px}}
 @media(min-width:701px){.ab-note{width:520px;max-width:100%;text-align:center;margin-left:0!important}}
+/* wave6 */.ab-ctas .btn:nth-child(1),.ab-ctas .btn:nth-child(1):hover{background:#08661f}.ab-ctas .btn:nth-child(2),.ab-ctas .btn:nth-child(2):hover{background:#0b962e}
+.refcard .btn.g{background:var(--green)}
+.hs-cta.hs-up{gap:22px}
