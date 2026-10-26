@@ -491,3 +491,34 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 .ann-circ.c1{top:calc(var(--sp) + (100% - 2*var(--sp))*.16);height:calc((100% - 2*var(--sp))*.34)}
 .ann-circ.c2{top:calc(var(--sp) + (100% - 2*var(--sp))*.41);height:calc((100% - 2*var(--sp))*.34)}
 .ann-circ.c3{top:calc(var(--sp) + (100% - 2*var(--sp))*.43);height:calc((100% - 2*var(--sp))*.28)}
+
+/* wave 4 */
+/* S1/S5 hero button spacing + pick-your-path scribble */
+.ab-ctas{gap:16px!important}
+.ab-note{margin-left:56px!important;font-size:31px!important}
+@media(max-width:768px){.ab-ctas{gap:12px!important}.ab-note{margin-left:40px!important;font-size:28px!important}}
+/* S4/S9/S15/S20 refband buttons: chunky green pill, dark offset shadow */
+.refband .btn,.refband .btn.ghost,.refcard .btn,.refcard .btn.ghost,.refband .btn:not(.ghost){background:var(--green2)!important;color:#fff!important;border:2px solid #111!important;border-radius:50px!important;box-shadow:3px 4px 0 #111;transform:rotate(-1deg);height:46px!important;transition:transform .15s,box-shadow .15s}
+.refband .btn:hover,.refcard .btn:hover,.refband .btn.ghost:hover,.refcard .btn.ghost:hover{background:var(--green2)!important;color:#fff!important;border-color:#111!important;transform:rotate(0) translateY(-2px);box-shadow:4px 6px 0 #111}
+.refcard .ctas{gap:16px!important}
+/* S11/S16 circled + highlighted rate */
+.circ-hl{position:relative;display:inline-block;font-weight:700;padding:0 .2em;white-space:nowrap;background:linear-gradient(104deg,rgba(187,247,208,0) 0%,#bbf7d0 3%,#a7f0bf 50%,#bbf7d0 96%,rgba(187,247,208,0) 100%) no-repeat 0 88%/100% 46%}
+.circ-hl:after{content:"";position:absolute;left:-12%;top:-38%;width:124%;height:176%;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' preserveAspectRatio='none'%3E%3Cpath d='M30 18 C 80 2, 180 6, 192 46 C 200 84, 110 98, 50 90 C 8 84, 2 50, 22 28 C 34 16, 60 10, 84 9' fill='none' stroke='%230b962e' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+/* S12 mentor hero scribble nudged right */
+.hero-mentor .hs-cta .hs-note{margin-left:30px!important}
+/* S17-S19 annotations: no little arrows, green circles */
+.ann-ar{display:none!important}
+.ann-circ{stroke:var(--green2)!important}
+/* S2 animated dotted trail in heroes + bands */
+.hero-hs{position:relative}
+.hero-hs>.wrap{position:relative;z-index:1}
+.hero-trail,.band-trail{position:absolute;left:0;width:100%;pointer-events:none;overflow:visible;z-index:0}
+.hero-trail{bottom:0;height:70%}
+.band-trail{top:0;height:100%}
+.hero-trail path,.band-trail path{fill:none;stroke-width:3;stroke-linecap:round;stroke-dasharray:0 11;vector-effect:non-scaling-stroke;animation:trail-march 1.6s linear infinite}
+.hero-trail path{stroke:var(--green2);opacity:.45}
+.band-trail path{stroke:#fff;opacity:.28}
+.refband{position:relative}
+.refband>.wrap{position:relative;z-index:1}
+@keyframes trail-march{to{stroke-dashoffset:-22}}
+@media(prefers-reduced-motion:reduce){.hero-trail path,.band-trail path{animation:none}}
