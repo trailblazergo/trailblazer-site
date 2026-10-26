@@ -521,7 +521,7 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 .refband{position:relative}
 .refband>.wrap{position:relative;z-index:1}
 @keyframes trail-march{to{stroke-dashoffset:-22}}
-@media(prefers-reduced-motion:reduce){.hero-trail path,.band-trail path{animation:none}}
+
 /* w5 */
 .ab-note{display:block}
 @media(max-width:700px){.ab-note{margin-left:auto!important;margin-right:auto!important;text-align:center}}
@@ -565,4 +565,6 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 .hero-home2 .ab-note{--fbc:106px}.hero-ab2 .ab-note{--fbc:95px}
 @media(max-width:900px){.hero-hs .ab-note{--fbc:50%!important;margin:22px 0 0!important}}
 @media(max-width:480px){.hero-hs .ab-note{font-size:22px!important}}
-@media (max-width:900px){/* w10 sticky above shot */.pw-feat.rev .sn{order:1!important}.pw-feat.rev .shot-wrap{order:2!important}}
+/* w10 sticky above shot */@media (max-width:900px){.pw-feat.rev>.embed{order:1!important}.pw-feat.rev>.shot-wrap{order:2!important}}
+
+/* w10 dotted trail keeps marching even with reduce-motion on (gentle, decorative) */@media (prefers-reduced-motion:reduce){.hero-trail path,.band-trail path{animation:trail-march 1.6s linear infinite!important}}
