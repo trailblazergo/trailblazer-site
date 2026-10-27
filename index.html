@@ -104,8 +104,120 @@
 <g id="lines"></g><g id="pins"></g></svg>
 </div>
 </div></section>
-<section class="sec-hiw"><div class="wrap"><iframe class="embed" src="embeds/how-it-works.html?v=r6" title="how-it-works" style="height:498px" loading="lazy" scrolling="no"></iframe></div>
-<div class="center"><a class="btn g inv stk" style="width:266px" href="https://app.trailblazergo.com/start" target="_blank" rel="noopener">Get Matched!</a></div></section>
+<section class="hw" id="how-it-works"><style>
+.hw{background:#fff;padding:64px 24px 40px;overflow:hidden;font-family:"Nunito Sans",sans-serif;color:#111}
+.hw .hw-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:center}
+.hw .hw-kick{font:700 28px "Caveat",cursive;color:#0b962e;margin:0}
+.hw h2{font:600 38px/1.15 "Work Sans",sans-serif;margin:4px 0 8px;position:relative;display:inline-block;z-index:0}
+.hw h2 svg{position:absolute;left:-6px;right:-6px;bottom:-12px;height:18px;width:calc(100% + 12px);z-index:-1}
+.hw h2 path{fill:none;stroke:#a7f0bf;stroke-width:7;stroke-linecap:round;opacity:.85}
+.hw ol{list-style:none;padding:0;margin:28px 0 0}
+.hw .hw-st{display:flex;gap:16px;padding:16px 18px;margin-bottom:12px;border-radius:16px;border:2px solid transparent;cursor:pointer;position:relative;transition:background .35s,border-color .35s}
+.hw .hw-st:hover{background:#f4fdf6}.hw .hw-st.hw-on{background:#e0fce7;border-color:#0b962e}
+.hw .hw-st>b{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid #0b962e;color:#0b962e;display:grid;place-items:center;font:600 20px "Work Sans",sans-serif;transition:.35s}
+.hw .hw-st.hw-on>b{background:#0b962e;color:#fff}
+.hw .hw-st h3{margin:0 0 4px;font:600 20px "Work Sans",sans-serif}.hw .hw-st p{margin:0;color:#555;font-size:16px;line-height:1.45}
+.hw .hw-pg{position:absolute;left:18px;right:18px;bottom:6px;height:3px;border-radius:3px;background:#0b962e;transform:scaleX(0);transform-origin:left;opacity:0}
+.hw .hw-st.hw-on .hw-pg{opacity:.5;animation:hwpg var(--dur) linear forwards}
+@keyframes hwpg{to{transform:scaleX(1)}}
+.hw .hw-ph{position:relative;display:flex;justify-content:center}
+.hw .hw-blob{position:absolute;width:330px;height:330px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.hw .hw-blob path{fill:none;stroke:#a7f0bf;stroke-width:9;stroke-linecap:round;opacity:.7}
+.hw .hw-phone{position:relative;width:282px;background:#111;border-radius:38px;padding:10px;box-shadow:0 18px 40px rgba(0,0,0,.22);transform:rotate(-3deg);z-index:1}
+/* screen = live app (frontend Next.js): Nunito Sans, bg-gray-50, primary #36CE5D, white header w/ #ECECEC border */
+.hw .hw-scr{background:#f9fafb;border-radius:29px;overflow:hidden;height:560px;position:relative;font-family:"Nunito Sans",sans-serif;color:#1f2937}
+.hw .hw-sb{height:24px;background:#fff}
+.hw .hw-top{position:relative;display:flex;align-items:center;justify-content:center;height:44px;background:#fff;border-bottom:1px solid #ECECEC}
+.hw .hw-top img{height:17px}.hw .hw-top svg{position:absolute;left:14px;width:18px;height:18px;stroke:#111;fill:none;stroke-width:2}
+.hw .hw-v{position:absolute;top:68px;left:0;right:0;bottom:0;padding:12px;opacity:0;transform:translateY(10px);transition:opacity .55s,transform .55s;pointer-events:none;overflow:hidden}
+.hw .hw-v.hw-on{opacity:1;transform:none}
+.hw .hw-h1{font-weight:600;font-size:16px;color:#1f2937;margin:2px 0 4px;line-height:1.2}
+.hw .hw-sub{font-size:10.5px;color:#4b5563;line-height:1.4;margin:0 0 8px}
+.hw .hw-obtn{display:flex;align-items:center;justify-content:center;gap:5px;border:1px solid #36CE5D;color:#36CE5D;background:#fff;border-radius:6px;font-size:11px;font-weight:600;padding:6px}
+.hw .hw-obtn svg,.hw .hw-pbtn svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2}
+.hw .hw-acc{display:flex;align-items:baseline;gap:6px;font-weight:600;font-size:14px;color:#1f2937;margin:12px 0 6px}.hw .hw-acc small{font-weight:400;font-size:10px;color:#6b7280}
+.hw .hw-acc svg{width:12px;height:12px;stroke:#1f2937;fill:none;stroke-width:2;margin-left:auto;align-self:center}
+.hw table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;font-size:10.5px;table-layout:fixed}
+.hw th{background:#f9fafb;color:#6b7280;font-weight:500;font-size:8.5px;text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:6px}
+.hw td{padding:7px 6px;border-top:1px solid #e5e7eb;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hw td:first-child{color:#111827;font-weight:500;white-space:normal}
+.hw td svg{width:13px;height:13px;stroke:#9ca3af;fill:none;stroke-width:2;display:block;margin-left:auto}.hw td svg.hw-on{stroke:#36CE5D;fill:#36CE5D}
+.hw .hw-v.hw-on tbody tr{animation:hwin .5s both}.hw .hw-v.hw-on tbody tr:nth-child(2){animation-delay:.15s}.hw .hw-v.hw-on tbody tr:nth-child(3){animation-delay:.3s}.hw .hw-v.hw-on tbody tr:nth-child(4){animation-delay:.45s}
+@keyframes hwin{from{opacity:0;transform:translateY(8px)}}
+.hw .hw-ban{background:linear-gradient(90deg,rgba(240,253,244,.5),rgba(239,246,255,.5));border:1px solid #e2e8f0;border-radius:8px;padding:9px;margin-bottom:10px}
+.hw .hw-ban b{display:block;font-weight:600;font-size:12px;color:#1f2937}.hw .hw-ban p{font-size:10px;color:#4b5563;margin:2px 0 7px;line-height:1.35}
+.hw .hw-pbtn{display:flex;align-items:center;justify-content:center;gap:5px;background:#36CE5D;color:#fff;border-radius:6px;font-size:11.5px;font-weight:600;padding:8px}
+.hw .hw-card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px;margin-bottom:10px;font-size:11px;line-height:1.5;color:#1f2937}
+.hw .hw-card>img{width:44px;height:44px;border-radius:50%;object-fit:cover;margin-bottom:4px;display:block}
+.hw .hw-card h5{margin:0;font-size:13px;font-weight:700}.hw .hw-card p{margin:0}.hw .hw-card .hw-bio{padding-top:5px;color:#374151}
+.hw .hw-tags{display:flex;flex-wrap:wrap;gap:4px;padding-top:6px}
+.hw .hw-tags span{font-size:9.5px;font-weight:600;background:#ADFFC2;border:1px solid #36CE5D;border-radius:6px;padding:1px 6px;text-transform:capitalize}
+.hw .hw-v.hw-on .hw-card{animation:hwin .5s both}.hw .hw-v.hw-on .hw-card+.hw-card{animation-delay:.2s}
+.hw .hw-who{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:10.5px;color:#374151}.hw .hw-who img{width:32px;height:32px;border-radius:50%}.hw .hw-who b{display:block;font-size:12px;color:#1f2937}
+.hw .hw-cal{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:10px}
+.hw .hw-cap{display:flex;align-items:center;font-weight:700;font-size:13px;padding:0 2px 6px}.hw .hw-cap span{margin-left:auto;display:flex;gap:6px}
+.hw .hw-cap svg{width:16px;height:16px;stroke:#1f2937;fill:none;stroke-width:2;border:1px solid #e5e7eb;border-radius:5px;padding:1px}
+.hw .hw-gd{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:11px;row-gap:3px}
+.hw .hw-gd .hw-w{font-weight:700;font-size:9.5px;text-transform:uppercase;padding-bottom:2px}
+.hw .hw-gd span{padding:4px 0;border-radius:6px}.hw .hw-gd .hw-o{color:gray;opacity:.5}.hw .hw-gd .hw-s{background:#36CE5D;color:#fff;font-weight:700}
+.hw .hw-day{font-weight:600;font-size:14px;margin:10px 0 6px}
+.hw .hw-slots{display:grid;gap:5px}
+.hw .hw-slots span{display:block;text-align:center;font-size:11px;font-weight:600;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:8px}
+.hw .hw-slots .hw-s{background:#ADFFC2;border-color:#36CE5D}
+.hw .hw-rq{margin-top:9px}
+.hw .hw-v.hw-on .hw-rq,.hw .hw-v.hw-on .hw-ban .hw-pbtn{animation:hwpop .5s .9s both}
+@keyframes hwpop{0%{transform:scale(.9);opacity:0}70%{transform:scale(1.05)}}
+.hw .hw-free{position:absolute;bottom:-28px;right:-30px;font:700 24px "Caveat",cursive;color:#0b962e;transform:rotate(-6deg);z-index:2}
+@media(max-width:820px){.hw{padding:44px 18px 30px}.hw .hw-in{grid-template-columns:1fr;gap:34px}.hw h2{font-size:30px}.hw .hw-st{padding:12px 14px}.hw .hw-free{right:-6px}}
+@media(prefers-reduced-motion:reduce){.hw .hw-v,.hw .hw-st{transition:none}.hw .hw-v.hw-on *{animation:none!important}}
+</style>
+<div class="hw-in"><div><p class="hw-kick">how it works</p>
+<h2>Three steps to your near-peer advisor<svg viewBox="0 0 300 18" preserveAspectRatio="none"><path d="M4 11 C60 4 120 15 180 8 S270 6 296 10"/></svg></h2>
+<ol>
+<li class="hw-st hw-on" data-i="0"><b>1</b><div><h3>Search</h3><p>Tell us your interests and goals. Get a personalized college list from about 3,000 colleges.</p></div><span class="hw-pg"></span></li>
+<li class="hw-st" data-i="1"><b>2</b><div><h3>Match</h3><p>Get matched with a paid, first-gen near-peer advisor who walked the same path.</p></div><span class="hw-pg"></span></li>
+<li class="hw-st" data-i="2"><b>3</b><div><h3>Schedule</h3><p>Pick a time and book your session, right from your phone.</p></div><span class="hw-pg"></span></li>
+</ol></div>
+<div class="hw-ph"><svg class="hw-blob" viewBox="0 0 330 330"><path d="M165 22 C250 18 312 88 304 170 C298 250 236 312 160 306 C80 300 22 240 26 160 C30 84 92 26 170 30"/></svg>
+<div class="hw-phone" aria-hidden="true"><div class="hw-scr"><div class="hw-sb"></div>
+<div class="hw-top"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg><img src="assets/img/tb-app-logo.svg" alt=""></div>
+<div class="hw-v hw-on">
+ <div class="hw-h1">Your College Recommendations</div>
+ <p class="hw-sub">Based on your profile, here are 30 curated schools that may be a great fit for you.</p>
+ <div class="hw-obtn"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/></svg>Get New Recommendations</div>
+ <div class="hw-acc">Target Schools <small>(10 colleges)</small><svg viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></svg></div>
+ <table><colgroup><col style="width:52%"><col style="width:36%"><col></colgroup>
+ <thead><tr><th>College Name</th><th>Location</th><th></th></tr></thead><tbody>
+ <tr><td>Howard University</td><td>Washington, DC</td><td><svg class="hw-on" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></td></tr><tr><td>University of Washington</td><td>Seattle, WA</td><td><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></td></tr><tr><td>Southern Methodist University</td><td>Dallas, TX</td><td><svg class="hw-on" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></td></tr><tr><td>Northwestern University</td><td>Evanston, IL</td><td><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></td></tr>
+ </tbody></table>
+</div>
+<div class="hw-v">
+ <div class="hw-ban"><b>Talk to a Student Who's Been There</b><p>Peer advisors from 50+ colleges across the country are ready to help you.</p><div class="hw-pbtn"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M16 4a4 4 0 0 1 0 8M22 21a7 7 0 0 0-4-6.3"/></svg>Explore Trailblazer Advisors</div></div>
+ <div class="hw-card"><img src="assets/av/av-09.png" alt=""><h5>Imani B.</h5>
+  <p>Currently at <b>Howard University</b></p><p>Studying <b>Nursing</b></p><p>Graduating <b>2027</b></p><p>From <b>Baltimore, MD</b></p>
+  <p class="hw-bio">First in my family to go to college. Ask me about financial aid and nursing school!</p>
+  <div class="hw-tags"><span>first-gen</span><span>financial aid</span><span>pre-med</span></div></div>
+ <div class="hw-card"><img src="assets/av/av-13.png" alt=""><h5>Kenji S.</h5><p>Currently at <b>University of Washington</b></p></div>
+</div>
+<div class="hw-v">
+ <div class="hw-who"><img src="assets/av/av-09.png" alt=""><div><b>Imani B.</b>Howard University · Nursing</div></div>
+ <div class="hw-cal"><div class="hw-cap">November 2026<span><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></div>
+ <div class="hw-gd"><span class="hw-w">Su</span><span class="hw-w">Mo</span><span class="hw-w">Tu</span><span class="hw-w">We</span><span class="hw-w">Th</span><span class="hw-w">Fr</span><span class="hw-w">Sa</span>
+ <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span class="hw-o">7</span>
+ <span class="hw-o">8</span><span>9</span><span>10</span><span class="hw-s">11</span><span>12</span><span>13</span><span class="hw-o">14</span>
+ <span class="hw-o">15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span class="hw-o">21</span></div></div>
+ <div class="hw-day">Wed 11</div>
+ <div class="hw-slots"><span>3:30 PM</span><span class="hw-s">4:00 PM</span><span>4:30 PM</span></div>
+ <div class="hw-pbtn hw-rq">Request Session</div>
+</div>
+</div></div><span class="hw-free">a real person who gets it</span></div>
+</div>
+<div class="center" style="margin-top:56px"><a class="btn g inv stk" style="width:266px" href="https://app.trailblazergo.com/start" target="_blank" rel="noopener">Get Matched!</a></div>
+<script>(function(){var D=4000,s=document.getElementById('how-it-works'),st=[].slice.call(s.querySelectorAll('.hw-st')),vw=[].slice.call(s.querySelectorAll('.hw-v')),i=0,t;s.style.setProperty('--dur',D+'ms');
+function go(n){i=n;st.forEach(function(e,k){e.classList.toggle('hw-on',k==n);var p=e.querySelector('.hw-pg');p.style.animation='none';p.offsetWidth;p.style.animation=''});vw.forEach(function(v,k){v.classList.toggle('hw-on',k==n)});clearTimeout(t);t=setTimeout(function(){go((i+1)%3)},D)}
+st.forEach(function(e){e.onclick=function(){go(+e.dataset.i)}});var q=location.search.match(/hw=(\d)/);if(q){go(+q[1]);clearTimeout(t)}else go(0)})();</script>
+</section>
+
 <section><div class="wrap"><iframe class="embed" src="embeds/mentorship-designed.html?v=r7" title="mentorship-designed" style="height:820px" loading="lazy" scrolling="no"></iframe></div>
 <div class="trail-wrap"><svg class="trail" viewBox="0 0 1000 220" preserveAspectRatio="none" aria-hidden="true"><defs><mask id="trail-m" maskUnits="userSpaceOnUse"><path class="trail-draw" d="M-20 30 C 120 30, 160 110, 60 140 S 120 215, 330 200 S 700 10, 860 60 S 960 190, 1020 170" pathLength="1"/></mask></defs><path class="trail-dots" d="M-20 30 C 120 30, 160 110, 60 140 S 120 215, 330 200 S 700 10, 860 60 S 960 190, 1020 170" mask="url(#trail-m)"/></svg><div class="refer-band"><div><b>Want free advising from Trailblazer peer advisors?</b><span>Refer a school, nonprofit, or community organization and when they join Trailblazer, you get free advising!</span></div><a class="btn stk" href="#refer" data-open-refer>Refer Your School!</a></div></div></section>
 
