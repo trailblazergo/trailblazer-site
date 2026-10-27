@@ -7,6 +7,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Work+Sans:wght@600&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/site.css?v=w11">
 <link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png"><link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<style>
+.about-feat{align-items:center}
+.about-feat .lap{position:relative;margin:0 auto;align-self:center;width:100%;max-width:640px;min-width:0;transform:rotate(-1.5deg)}
+.lap .lap-scr{position:relative;background:#111;border-radius:18px 18px 6px 6px;padding:18px 16px 16px;box-shadow:0 18px 40px rgba(0,0,0,.22)}
+.lap .lap-cam{position:absolute;top:7px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#3a3a3a}
+.lap .shot,.about-feat .lap .shot{display:block;margin:0;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border:0;border-radius:4px;box-shadow:none;background:#fff}
+.lap .lap-base{position:relative;width:114%;left:-7%;height:16px;background:linear-gradient(#e4e7e5,#b9bfbb);border-radius:2px 2px 14px 14px;box-shadow:0 14px 26px -8px rgba(0,0,0,.3)}
+.lap .lap-base:before{content:"";position:absolute;top:0;left:50%;width:18%;margin-left:-9%;height:6px;background:#a3aaa6;border-radius:0 0 8px 8px}
+@media(max-width:1000px){.about-feat .lap{margin-top:24px;max-width:540px}}
+@media(max-width:600px){.about-feat .lap{width:86%;transform:none}.lap .lap-scr{padding:10px 8px 9px;border-radius:12px 12px 4px 4px}.lap .lap-cam{top:3px;width:4px;height:4px;margin-left:-2px}.lap .lap-base{height:10px}.lap .lap-base:before{height:4px}}
+</style>
+<style>
+.sup{text-align:center;padding:48px 0 64px}
+.sup h2{font-family:var(--f-head);font-size:clamp(26px,3vw,36px);margin:0 0 8px}
+.sup .lead{color:#000;margin:0 auto 32px;max-width:560px}
+.sup-row{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;max-width:1040px;margin:0 auto;padding:0 20px}
+.sup-card{flex:1 1 280px;max-width:320px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:16px;padding:28px 20px 22px;border:1px solid #e3ebe5;border-radius:16px;background:#fff;text-decoration:none;color:#000;transition:border-color .2s,box-shadow .2s,transform .2s}
+.sup-card:hover{border-color:var(--green2);box-shadow:0 10px 24px -14px rgba(8,102,31,.45);transform:translateY(-2px)}
+.sup-card .logo{height:96px;width:100%;display:flex;align-items:center;justify-content:center}
+.sup-card img{height:80px;width:auto;max-width:270px;object-fit:contain;transition:filter .25s,opacity .25s}
+.sup-card:hover img,.sup-card:focus img{filter:none;opacity:1}
+.sup-card b{font-family:var(--f-head);font-size:16px;display:block}
+.sup-card small{display:block;color:#000;font-size:14px;margin-top:4px}
+@media(max-width:600px){.sup-card{flex-basis:100%}.sup-card img{height:68px}}
+</style>
 </head><body>
 <a class="skip" href="#main">Skip to Main Content</a>
 <header class="hdr"><div class="wrap">
@@ -24,12 +49,18 @@
 </div></section>
 <section class="sec"><div class="about-title"><h2><span class="g">Trailblazer</span> is making <b class="hl">community-centric</b> advising accessible to <b class="circ-ev">everyone</b></h2><p class="lead">Our platform enables students to get personalized guidance from peers just like them, while supporting overburdened counselors</p></div><div class="about-feat"><div>
 <ul><li><img class="ic" src="../assets/img/about-ic1.png" alt="" aria-hidden="true"><span><b>AI &amp; analytics</b> tools streamline college search, tracking, &amp; advising caseloads</span></li><li><img class="ic" src="../assets/img/about-ic2.png" alt="" aria-hidden="true"><span><b>Access</b> to national peer network for relatable, first-gen focused college advising</span></li><li><img class="ic" src="../assets/img/about-ic3.png" alt="" aria-hidden="true"><span><b>Activate</b> alumni within minutes to pay them $20/hour for advising support</span></li><li><img class="ic" src="../assets/img/about-ic4.png" alt="" aria-hidden="true"><span><b>Grow</b> community connections with peers from your hometown and nationwide</span></li></ul>
-</div><img class="shot" src="../assets/img/shot-advisors.png" alt="Trailblazer platform" loading="lazy"></div>
+</div><div class="lap"><div class="lap-scr"><span class="lap-cam" aria-hidden="true"></span><img class="shot" src="../assets/img/shot-advisors.png" alt="Trailblazer platform" loading="lazy"></div><div class="lap-base" aria-hidden="true"></div></div></div>
 <div class="center" style="margin-top:20px"><a class="btn g stk" href="mailto:contact@trailblazergo.com?subject=%5BTrailblazer%5D%20Interested%20in%20Partnering!">Schedule a Demo</a></div></section>
+<section class="sec sup" id="supporters"><h2>Our <span class="g">supporters</span></h2><p class="lead">We're grateful to the organizations backing Trailblazer's mission</p><div class="sup-row">
+<a class="sup-card" href="https://unitedwaydallas.org/" target="_blank" rel="noopener"><span class="logo"><img src="../assets/img/supporters/uw-sia.png" alt="United Way of Metropolitan Dallas" loading="lazy"></span><span><b>United Way of Metropolitan Dallas</b><small>Social Innovation Accelerator, 2026 cohort</small></span></a>
+<a class="sup-card" href="https://svpdallas.org/" target="_blank" rel="noopener"><span class="logo"><img src="../assets/img/supporters/svp-dallas.png" alt="Social Venture Partners Dallas" loading="lazy"></span><span><b>Social Venture Partners Dallas</b><small>Funding partner</small></span></a>
+<a class="sup-card" href="https://acceleratelearning.stanford.edu/" target="_blank" rel="noopener"><span class="logo"><img src="../assets/img/supporters/stanford-afl.png" alt="Stanford Accelerator for Learning" loading="lazy"></span><span><b>Stanford Accelerator for Learning</b><small>Funding partner</small></span></a>
+</div></section>
 <section class="sec"><div class="founder"><img class="ph" src="../assets/img/2156f1_3a4faed76ef54058b235c92f297afc02.png" alt="Jeff Cott" loading="lazy"><div>
 <h3>Jeff Cott <small>(he/him/él)</small></h3><p class="role">Founder &amp; CEO</p>
 <p>A Dallas-native, Jeff graduated from Harvard as a first-gen college grad in 2018. After working in strategy consulting at Deloitte where he focused on public/social sector projects, he graduated with his Stanford MBA in 2024. He is passionate about leveraging technology and grassroots community to transform college access and success for students everywhere, no matter their background.</p>
 <p class="mail"><a href="mailto:jeff@trailblazergo.com">jeff@trailblazergo.com</a></p><div class="soc li"><a href="https://www.linkedin.com/in/jeff-cott-061aa8110/" target="_blank" rel="noopener"><img src="../assets/img/11062b_7cf73902d06c4f3685c379a21c6c8285.png" alt="Linkedin"></a></div></div></div></section>
+
 </main>
 <footer class="ftr"><div class="wrap">
 <div><a class="logo" href="../"><img src="../assets/img/logo-wordmark.png" alt="Trailblazer" width="233" height="37"></a>
