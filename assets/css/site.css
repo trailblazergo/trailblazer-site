@@ -575,3 +575,5 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 .refcard .btn.ghost,.refcard .btn.ghost:hover,.refband .refcard .btn.ghost,.refband .refcard .btn.ghost:hover{background:var(--green2)!important;color:#fff!important;border:2px solid #111!important}
 .refer-band .btn.stk,.refer-band .btn.stk:hover{background:var(--green2)!important;color:#fff!important}
 @media(max-width:768px){.refband .refcard .btn,.refband .refcard .btn.g,.refband .refcard .btn:hover{background:var(--green2)!important}.refband .refcard .btn.ghost,.refband .refcard .btn.ghost:hover{background:#2fb457!important}}
+
+/* w1027 sticky lift (matches about sup-card hover) */.sn,.nb-card,.ask-card{transition:border-color .2s,box-shadow .2s,transform .2s,translate .2s,background-color .5s ease;cursor:default}.sn:hover,.nb-card:hover,.ask-card:hover{translate:0 -2px;box-shadow:4px 6px 0 #111,0 10px 24px -14px rgba(8,102,31,.45)}@media(prefers-reduced-motion:reduce){.sn:hover,.nb-card:hover,.ask-card:hover{translate:none}}
