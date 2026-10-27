@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title>Hero map mockup | Trailblazer</title>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Work+Sans:wght@600&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css"><link rel="icon" href="assets/img/favicon-32.png">
@@ -71,7 +71,14 @@
 .pin .col{font:700 19px "Work Sans",sans-serif;fill:#0b4d1b;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:5}
 .nfill{fill:#f7fff9;stroke:none}.nout{fill:none;stroke:#1d2b21;stroke-width:3;stroke-linejoin:round}.states path{fill:none!important;stroke:#55675a!important;stroke-width:1.1!important;opacity:.75!important;stroke-dasharray:22 2 30 3!important;stroke-linejoin:round}.mapbox{padding-left:190px!important;position:relative}.phone{z-index:5;left:-40px!important;top:50%!important;transform:translateY(-50%) rotate(-3deg)!important}.list{padding:8px}.card span{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;line-height:1.15}.card em{white-space:nowrap}.card i{padding:3px 6px!important;font-size:9.5px!important}.card span{font-size:11px!important;flex-wrap:wrap}.card{gap:7px!important}.phone{width:282px!important;left:-70px!important}.scr{height:540px!important}.list{top:130px!important}.card{padding:10px 10px!important;margin-bottom:11px!important;gap:10px!important}.card img{width:44px!important;height:44px!important}.card b{font-size:14px!important;margin-bottom:2px}.card span{font-size:12px!important;margin-bottom:3px}.card em{font-size:11.5px!important;margin-top:1px}.card em.mj{color:#08661f;font-weight:600}.card i{font-size:10.5px!important;padding:5px 9px!important}.mapbox{padding-left:215px!important}.card span .lg{width:16px!important;height:16px!important;border-radius:3px!important}.card em.mj{white-space:normal!important;line-height:1.2}.card span{flex-wrap:nowrap!important;white-space:nowrap!important}.mapbox{padding-left:0!important}.how{background:#fff;padding:70px 24px}.howin{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:center}.kick{font:700 26px "Caveat",cursive;color:#0b962e;margin:0}.how h2{font:700 38px "Work Sans",sans-serif;margin:4px 0 26px}.how ol{list-style:none;padding:0;margin:0}.how li{display:flex;gap:16px;margin-bottom:22px}.how li b{flex:none;width:44px;height:44px;border-radius:50%;background:#0b962e;color:#fff;display:grid;place-items:center;font:700 20px "Work Sans",sans-serif}.how h3{margin:0 0 4px;font:600 20px "Work Sans",sans-serif}.how p{margin:0;color:#555;font-size:16px}.howph{position:relative;height:580px}.howph .phone{position:relative!important;left:auto!important;top:auto!important;transform:rotate(-3deg)!important;margin:0 auto}
 @keyframes fl{0%,100%{transform:translate(0,0)}25%{transform:translate(1.5px,-3px)}50%{transform:translate(-1px,-5px)}75%{transform:translate(-2px,-2px)}}
-.pin g,.pin{transform-box:fill-box;transform-origin:center}.pin{animation:fl 4s ease-in-out infinite}.pin.s1{animation-duration:5.5s}@media(max-width:800px){.howin{grid-template-columns:1fr}}</style></head><body>
+.pin g,.pin{transform-box:fill-box;transform-origin:center}.pin,.pin.s1{animation:none!important}@media(max-width:800px){.howin{grid-template-columns:1fr}}
+.ln{animation:none!important}
+.ln.sp{stroke-dasharray:none;stroke-width:1.6;opacity:.22}
+.ln.lit{stroke-dasharray:1 1;stroke-dashoffset:1;stroke-width:2.4;opacity:0;filter:drop-shadow(0 0 3px #4ade80);animation:lit var(--du,3s) ease-out var(--de,0s) infinite!important}
+@keyframes lit{0%{stroke-dashoffset:1;opacity:0}6%{opacity:.45}38%{stroke-dashoffset:0;opacity:.45}52%{stroke-dashoffset:0;opacity:.55}80%,100%{stroke-dashoffset:0;opacity:0}}
+.pin .lg{fill:none;stroke:#4ade80;stroke-width:3;opacity:0;animation:lg var(--du,3s) ease-out var(--de,0s) infinite}
+@keyframes lg{0%,34%{opacity:0}48%{opacity:.4}80%,100%{opacity:0}}
+</style></head><body>
 <header class="hdr"><div class="wrap">
 <a class="logo" href="./"><img src="assets/img/logo-wordmark.png" alt="Trailblazer" width="270" height="43"></a>
 <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -94,12 +101,17 @@
 const NS="http://www.w3.org/2000/svg",S=document.getElementById("map"),G=document.getElementById("pins"),L=document.getElementById("lines");
 const A="assets/ath/";
 // size: 3 hub, 2 mid, 1 small
-const N=[{l:"Washington_Huskies_logo.svg",a:13,x:98,y:46,s:1},{l:"Stanford_Cardinal_logo.svg",a:5,x:38,y:262,s:1},{l:"olc.png",a:18,x:397,y:194,s:1},{l:"SMU_Mustang_logo.svg",a:11,x:483,y:440,s:1},{l:"Northwestern_Wildcats_logo.svg",a:10,x:638,y:226,s:1},{l:"Miami_Hurricanes_logo.svg",a:7,x:823,y:573,s:1},{l:"Harvard_Crimson_logo.svg",a:17,x:909,y:167,s:1},{l:"Colorado_Buffaloes_alternate_logo.svg",a:3,x:343,y:274,s:1},{l:"howard.png",a:9,x:827,y:267,s:1},{a:9,x:47,y:128,s:0,h:0},{a:11,x:170,y:158,s:0,h:0},{a:14,x:156,y:325,s:0,h:1},{a:10,x:196,y:392,s:0,h:1},{a:2,x:87,y:363,s:0,h:1},{a:13,x:549,y:135,s:0,h:2},{a:2,x:424,y:118,s:0,h:2},{a:17,x:257,y:177,s:0,h:2},{a:15,x:523,y:296,s:0,h:3},{a:7,x:297,y:453,s:0,h:3},{a:5,x:470,y:553,s:0,h:3},{a:19,x:695,y:319,s:0,h:4},{a:4,x:607,y:383,s:0,h:4},{a:8,x:229,y:235,s:0,h:7},{a:1,x:302,y:377,s:0,h:7},{a:16,x:715,y:405,s:0,h:5},{a:6,x:669,y:441,s:0,h:5},{a:12,x:775,y:362,s:0,h:8},{a:3,x:775,y:168,s:0,h:6},{a:18,x:929,y:59,s:0,h:6}];
+const N=[{l:"Washington_Huskies_logo.svg",a:13,x:98,y:46,s:1},{l:"Stanford_Cardinal_logo.svg",a:5,x:38,y:262,s:1},{l:"olc.png",a:30,x:397,y:194,s:1},{l:"SMU_Mustang_logo.svg",a:11,x:483,y:440,s:1},{l:"Northwestern_Wildcats_logo.svg",a:10,x:638,y:226,s:1},{l:"Miami_Hurricanes_logo.svg",a:7,x:823,y:573,s:1},{l:"Harvard_Crimson_logo.svg",a:17,x:909,y:167,s:1},{l:"Colorado_Buffaloes_alternate_logo.svg",a:3,x:330,y:292,s:1},{l:"howard.png",a:9,x:827,y:267,s:1},{a:9,x:47,y:128,s:0,h:0},{a:11,x:170,y:158,s:0,h:0},{a:14,x:156,y:325,s:0,h:1},{a:10,x:196,y:392,s:0,h:1},{a:2,x:87,y:363,s:0,h:1},{a:13,x:549,y:135,s:0,h:2},{a:2,x:424,y:118,s:0,h:2},{a:17,x:257,y:177,s:0,h:2},{a:15,x:523,y:296,s:0,h:3},{a:7,x:297,y:453,s:0,h:3},{a:5,x:470,y:553,s:0,h:3},{a:19,x:695,y:319,s:0,h:4},{a:4,x:607,y:383,s:0,h:4},{a:8,x:229,y:235,s:0,h:7},{a:1,x:302,y:377,s:0,h:7},{a:16,x:715,y:405,s:0,h:5},{a:6,x:669,y:441,s:0,h:5},{a:12,x:775,y:362,s:0,h:8},{a:3,x:775,y:168,s:0,h:6},{a:18,x:929,y:59,s:0,h:6}];
 const E=[[0,1],[0,2],[1,7],[7,2],[7,3],[2,4],[3,4],[4,8],[8,6],[4,6],[3,5],[5,8]];N.forEach((p,i)=>p.h!==undefined&&E.push([p.h,i]));
 const RS=[19,36];
 function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e}
-E.forEach(([a,b])=>{const p=N[a],q=N[b];el("path",{class:"ln"+(p.s&&q.s?" hub":""),d:`M${p.x} ${p.y} L${q.x} ${q.y}`},L)});
+const LT={};E.forEach(([a,b])=>{const p=N[a],q=N[b],d=`M${p.x} ${p.y} L${q.x} ${q.y}`;
+ if(p.s&&q.s){el("path",{class:"ln hub",d},L);return}
+ const h=p.s?p:q,t=p.s?q:p,ti=p.s?b:a;el("path",{class:"ln sp",d:`M${h.x} ${h.y} L${t.x} ${t.y}`},L);
+ const du=(2.4+Math.random()*1.6).toFixed(2),de=(-Math.random()*4-Math.random()*6).toFixed(2);LT[ti]={du,de};
+ el("path",{class:"ln lit",pathLength:1,d:`M${h.x} ${h.y} L${t.x} ${t.y}`,style:`--du:${du}s;--de:${de}s`},L)});
 N.forEach((p,i)=>{const R=RS[p.s],g=el("g",{class:"pin s"+p.s,style:`animation-delay:-${(i*0.37)%4}s`},G);
+ if(LT[i])el("circle",{class:"lg",cx:p.x,cy:p.y,r:R+6,style:`--du:${LT[i].du}s;--de:${LT[i].de}s`},g);
  el("circle",{class:"ring",cx:p.x,cy:p.y,r:R+3},g);
  el("clipPath",{id:"k"+i},g).appendChild(el("circle",{cx:p.x,cy:p.y,r:R}));
  el("image",{href:`assets/av/av-${String(p.a).padStart(2,"0")}.png`,x:p.x-R,y:p.y-R,width:2*R,height:2*R,"clip-path":`url(#k${i})`},g);
