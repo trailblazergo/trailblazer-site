@@ -273,14 +273,14 @@ const E=[[0,1],[0,2],[1,7],[7,2],[7,3],[2,4],[3,4],[4,8],[8,6],[4,6],[3,5],[5,8]
 const RS=[19,36];
 function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e}
 const D=el("defs",{},S);let mi=0;
+
 function pulse(d,c){const du=(3.2+Math.random()*2.4).toFixed(2),de=(-Math.random()*9).toFixed(2),id="pm"+(mi++);
  const m=el("mask",{id,maskUnits:"userSpaceOnUse",x:0,y:0,width:975,height:610},D);
- el("path",{class:"pm",d,pathLength:1,"stroke-width":c.includes("hub")?10:8,style:`--du:${du}s;--de:${de}s`},m);
- el("path",{class:c+" pl",d,mask:`url(#${id})`},L)}
-E.forEach(([a,b])=>{const p=N[a],q=N[b],d=`M${p.x} ${p.y} L${q.x} ${q.y}`;
- if(p.s&&q.s){el("path",{class:"ln hub",d},L);pulse(d,"ln hub");return}
- const h=p.s?p:q,t=p.s?q:p,dd=`M${h.x} ${h.y} L${t.x} ${t.y}`;el("path",{class:"ln sp",d:dd},L);pulse(dd,"ln sp")});
-N.forEach((p,i)=>{const R=RS[p.s],g=el("g",{class:"pin s"+p.s,style:`animation-delay:-${(i*0.37)%4}s`},G);
+ return [el("path",{class:"pm",d,pathLength:1,"stroke-width":c.includes("hub")?10:8,style:`--du:${du}s;--de:${de}s`},m),el("path",{class:c+" pl",d,mask:`url(#${id})`},L)]}
+const LN=[];
+E.forEach(([a,b])=>{const p=N[a],q=N[b],c=p.s&&q.s?"ln hub":"ln sp",d=`M${p.x} ${p.y} L${q.x} ${q.y}`;
+ LN.push({a,b,ps:[el("path",{class:c,d},L),...pulse(d,c)]})});
+N.forEach((p,i)=>{const R=RS[p.s],g0=el("g",{class:"pin s"+p.s,style:`animation-delay:-${(i*0.37)%4}s`},G),g=el("g",{class:"pi"},g0);p.g=g;
  el("circle",{class:"ring",cx:p.x,cy:p.y,r:R+3},g);
  el("clipPath",{id:"k"+i},g).appendChild(el("circle",{cx:p.x,cy:p.y,r:R}));
  el("image",{href:`assets/av/av-${String(p.a).padStart(2,"0")}.png`,x:p.x-R,y:p.y-R,width:2*R,height:2*R,"clip-path":`url(#k${i})`},g);
@@ -289,5 +289,17 @@ N.forEach((p,i)=>{const R=RS[p.s],g=el("g",{class:"pin s"+p.s,style:`animation-d
   el("image",{href:A+p.l,x:bx-b*.45,y:by-b*.45,width:b*.9,height:b*.9},g);
   }
 });
+// entry: avatars pop in one by one, connections draw out to each new arrival
+(function(){const ord=N.map((p,i)=>i).sort((x,y)=>(N[y].s-N[x].s)||x-y),T=150,seen={};
+ if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+ N.forEach(p=>p.g.style.opacity=0);LN.forEach(l=>l.ps.forEach(e=>e.style.visibility="hidden"));
+ function grow(l,from){const p=N[from],q=N[from===l.a?l.b:l.a],t0=performance.now(),du=600;
+  l.ps.forEach(e=>e.style.visibility="");
+  (function f(t){const k=Math.min(1,(t-t0)/du),e=1-Math.pow(1-k,3),d=`M${p.x} ${p.y} L${p.x+(q.x-p.x)*e} ${p.y+(q.y-p.y)*e}`;
+   l.ps.forEach(x=>x.setAttribute("d",d));if(k<1)requestAnimationFrame(f)})(t0)}
+ function go(){ord.forEach((i,n)=>setTimeout(()=>{seen[i]=1;
+  N[i].g.style.opacity="";N[i].g.animate([{transform:"scale(0)",opacity:0},{transform:"scale(1.15)",opacity:1,offset:.7},{transform:"scale(1)",opacity:1}],{duration:420,easing:"ease-out"});
+  LN.forEach(l=>{const o=l.a===i?l.b:l.b===i?l.a:-1;if(o>=0&&seen[o])setTimeout(()=>grow(l,o),120)})},300+n*T))}
+ const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){io.disconnect();go()}},{threshold:.25});io.observe(S)})();
 </script>
 </body></html>
