@@ -74,10 +74,10 @@
 .pin g,.pin{transform-box:fill-box;transform-origin:center}.pin,.pin.s1{animation:none!important}@media(max-width:800px){.howin{grid-template-columns:1fr}}
 .ln{animation:none!important}
 .ln.sp{stroke-dasharray:none;stroke-width:1.6;opacity:.22}
-.ln.lit{stroke-dasharray:1 1;stroke-dashoffset:1;stroke-width:2.4;opacity:0;filter:drop-shadow(0 0 3px #4ade80);animation:lit var(--du,3s) ease-out var(--de,0s) infinite!important}
-@keyframes lit{0%{stroke-dashoffset:1;opacity:0}6%{opacity:.45}38%{stroke-dashoffset:0;opacity:.45}52%{stroke-dashoffset:0;opacity:.55}80%,100%{stroke-dashoffset:0;opacity:0}}
-.pin .lg{fill:none;stroke:#4ade80;stroke-width:3;opacity:0;animation:lg var(--du,3s) ease-out var(--de,0s) infinite}
-@keyframes lg{0%,34%{opacity:0}48%{opacity:.4}80%,100%{opacity:0}}
+.ln.pl{stroke:#22c55e;stroke-width:3.4;opacity:1;filter:drop-shadow(0 0 2.5px #4ade80)}
+.ln.pl.sp{stroke-dasharray:6 7;stroke-width:2.4}
+.pm{fill:none;stroke:#fff;stroke-linecap:round;stroke-dasharray:.16 1.84;stroke-dashoffset:.16;animation:pm var(--du,3s) linear var(--de,0s) infinite}
+@keyframes pm{0%{stroke-dashoffset:.16}55%,100%{stroke-dashoffset:-1}}
 </style></head><body>
 <header class="hdr"><div class="wrap">
 <a class="logo" href="./"><img src="assets/img/logo-wordmark.png" alt="Trailblazer" width="270" height="43"></a>
@@ -101,17 +101,19 @@
 const NS="http://www.w3.org/2000/svg",S=document.getElementById("map"),G=document.getElementById("pins"),L=document.getElementById("lines");
 const A="assets/ath/";
 // size: 3 hub, 2 mid, 1 small
-const N=[{l:"Washington_Huskies_logo.svg",a:13,x:98,y:46,s:1},{l:"Stanford_Cardinal_logo.svg",a:5,x:38,y:262,s:1},{l:"olc.png",a:30,x:397,y:194,s:1},{l:"SMU_Mustang_logo.svg",a:11,x:483,y:440,s:1},{l:"Northwestern_Wildcats_logo.svg",a:10,x:638,y:226,s:1},{l:"Miami_Hurricanes_logo.svg",a:7,x:823,y:573,s:1},{l:"Harvard_Crimson_logo.svg",a:17,x:909,y:167,s:1},{l:"Colorado_Buffaloes_alternate_logo.svg",a:3,x:330,y:292,s:1},{l:"howard.png",a:9,x:827,y:267,s:1},{a:9,x:47,y:128,s:0,h:0},{a:11,x:170,y:158,s:0,h:0},{a:14,x:156,y:325,s:0,h:1},{a:10,x:196,y:392,s:0,h:1},{a:2,x:87,y:363,s:0,h:1},{a:13,x:549,y:135,s:0,h:2},{a:2,x:424,y:118,s:0,h:2},{a:17,x:257,y:177,s:0,h:2},{a:15,x:523,y:296,s:0,h:3},{a:7,x:297,y:453,s:0,h:3},{a:5,x:470,y:553,s:0,h:3},{a:19,x:695,y:319,s:0,h:4},{a:4,x:607,y:383,s:0,h:4},{a:8,x:229,y:235,s:0,h:7},{a:1,x:302,y:377,s:0,h:7},{a:16,x:715,y:405,s:0,h:5},{a:6,x:669,y:441,s:0,h:5},{a:12,x:775,y:362,s:0,h:8},{a:3,x:775,y:168,s:0,h:6},{a:18,x:929,y:59,s:0,h:6}];
+const N=[{l:"Washington_Huskies_logo.svg",a:13,x:98,y:46,s:1},{l:"Stanford_Cardinal_logo.svg",a:5,x:38,y:262,s:1},{l:"olc.png",a:30,x:397,y:194,s:1},{l:"SMU_Mustang_logo.svg",a:11,x:483,y:440,s:1},{l:"Northwestern_Wildcats_logo.svg",a:10,x:638,y:226,s:1},{l:"Miami_Hurricanes_logo.svg",a:7,x:823,y:573,s:1},{l:"Harvard_Crimson_logo.svg",a:17,x:909,y:167,s:1},{l:"Colorado_Buffaloes_alternate_logo.svg",a:3,x:330,y:292,s:1},{l:"howard.png",a:9,x:827,y:267,s:1},{a:9,x:47,y:128,s:0,h:0},{a:11,x:170,y:158,s:0,h:0},{a:14,x:156,y:325,s:0,h:1},{a:10,x:196,y:392,s:0,h:1},{a:2,x:87,y:363,s:0,h:1},{a:13,x:549,y:135,s:0,h:4},{a:2,x:462,y:94,s:0,h:2},{a:17,x:257,y:177,s:0,h:2},{a:15,x:523,y:296,s:0,h:3},{a:7,x:297,y:453,s:0,h:3},{a:5,x:470,y:553,s:0,h:3},{a:19,x:695,y:319,s:0,h:4},{a:4,x:607,y:383,s:0,h:4},{a:8,x:229,y:235,s:0,h:7},{a:1,x:302,y:377,s:0,h:7},{a:16,x:715,y:405,s:0,h:5},{a:6,x:669,y:441,s:0,h:5},{a:12,x:775,y:362,s:0,h:8},{a:3,x:775,y:168,s:0,h:6},{a:13,x:929,y:59,s:0,h:6}];
 const E=[[0,1],[0,2],[1,7],[7,2],[7,3],[2,4],[3,4],[4,8],[8,6],[4,6],[3,5],[5,8]];N.forEach((p,i)=>p.h!==undefined&&E.push([p.h,i]));
 const RS=[19,36];
 function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e}
-const LT={};E.forEach(([a,b])=>{const p=N[a],q=N[b],d=`M${p.x} ${p.y} L${q.x} ${q.y}`;
- if(p.s&&q.s){el("path",{class:"ln hub",d},L);return}
- const h=p.s?p:q,t=p.s?q:p,ti=p.s?b:a;el("path",{class:"ln sp",d:`M${h.x} ${h.y} L${t.x} ${t.y}`},L);
- const du=(2.4+Math.random()*1.6).toFixed(2),de=(-Math.random()*4-Math.random()*6).toFixed(2);LT[ti]={du,de};
- el("path",{class:"ln lit",pathLength:1,d:`M${h.x} ${h.y} L${t.x} ${t.y}`,style:`--du:${du}s;--de:${de}s`},L)});
+const D=el("defs",{},S);let mi=0;
+function pulse(d,c){const du=(3.2+Math.random()*2.4).toFixed(2),de=(-Math.random()*9).toFixed(2),id="pm"+(mi++);
+ const m=el("mask",{id,maskUnits:"userSpaceOnUse",x:0,y:0,width:975,height:610},D);
+ el("path",{class:"pm",d,pathLength:1,"stroke-width":c.includes("hub")?10:8,style:`--du:${du}s;--de:${de}s`},m);
+ el("path",{class:c+" pl",d,mask:`url(#${id})`},L)}
+E.forEach(([a,b])=>{const p=N[a],q=N[b],d=`M${p.x} ${p.y} L${q.x} ${q.y}`;
+ if(p.s&&q.s){el("path",{class:"ln hub",d},L);pulse(d,"ln hub");return}
+ const h=p.s?p:q,t=p.s?q:p,dd=`M${h.x} ${h.y} L${t.x} ${t.y}`;el("path",{class:"ln sp",d:dd},L);pulse(dd,"ln sp")});
 N.forEach((p,i)=>{const R=RS[p.s],g=el("g",{class:"pin s"+p.s,style:`animation-delay:-${(i*0.37)%4}s`},G);
- if(LT[i])el("circle",{class:"lg",cx:p.x,cy:p.y,r:R+6,style:`--du:${LT[i].du}s;--de:${LT[i].de}s`},g);
  el("circle",{class:"ring",cx:p.x,cy:p.y,r:R+3},g);
  el("clipPath",{id:"k"+i},g).appendChild(el("circle",{cx:p.x,cy:p.y,r:R}));
  el("image",{href:`assets/av/av-${String(p.a).padStart(2,"0")}.png`,x:p.x-R,y:p.y-R,width:2*R,height:2*R,"clip-path":`url(#k${i})`},g);
