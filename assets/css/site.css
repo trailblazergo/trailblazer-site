@@ -568,3 +568,4 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 /* w10 sticky above shot */@media (max-width:900px){.pw-feat.rev>.embed{order:1!important}.pw-feat.rev>.shot-wrap{order:2!important}}
 
 /* w10 dotted trail keeps marching even with reduce-motion on (gentle, decorative) */@media (prefers-reduced-motion:reduce){.hero-trail path,.band-trail path{animation:trail-march 1.6s linear infinite!important}}
+/* refer band dotted trail marches like the others */.trail-dots{animation:trail-march 1.6s linear infinite!important}
