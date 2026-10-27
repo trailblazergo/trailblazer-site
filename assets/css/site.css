@@ -569,3 +569,9 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 
 /* w10 dotted trail keeps marching even with reduce-motion on (gentle, decorative) */@media (prefers-reduced-motion:reduce){.hero-trail path,.band-trail path{animation:trail-march 1.6s linear infinite!important}}
 /* refer band dotted trail marches like the others */.trail-dots{animation:trail-march 1.6s linear infinite!important}
+
+/* w1027 buttons: white-on-white -> dark green; pairs get a complementary shade */
+.refcard .btn,.refcard .btn.g,.refband .refcard .btn.g,.refband .refcard .btn.g:hover,.refcard .btn:hover{background:var(--green)!important;color:#fff!important;border:2px solid #111!important}
+.refcard .btn.ghost,.refcard .btn.ghost:hover,.refband .refcard .btn.ghost,.refband .refcard .btn.ghost:hover{background:var(--green2)!important;color:#fff!important;border:2px solid #111!important}
+.refer-band .btn.stk,.refer-band .btn.stk:hover{background:var(--green2)!important;color:#fff!important}
+@media(max-width:768px){.refband .refcard .btn,.refband .refcard .btn.g,.refband .refcard .btn:hover{background:var(--green2)!important}.refband .refcard .btn.ghost,.refband .refcard .btn.ghost:hover{background:#2fb457!important}}
