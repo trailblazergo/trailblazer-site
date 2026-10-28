@@ -128,6 +128,7 @@
 .hw .hw-scr{background:#f9fafb;border-radius:29px;overflow:hidden;height:560px;position:relative;font-family:"Nunito Sans",sans-serif;color:#1f2937}
 .hw .hw-sb{height:8px;background:#fff}
 .hw .hw-top{position:relative;display:flex;align-items:center;justify-content:center;height:44px;background:#fff;border-bottom:1px solid #ECECEC}
+.hw .hw-hl{background:linear-gradient(transparent 58%,#a7f0bf 58%);border-radius:4px;padding:0 2px}
 .hw .hw-top img{height:17px}.hw .hw-top svg{position:absolute;left:14px;width:18px;height:18px;stroke:#111;fill:none;stroke-width:2}
 .hw .hw-v{position:absolute;top:68px;left:0;right:0;bottom:0;padding:12px;opacity:0;transform:translateY(10px);transition:opacity .55s,transform .55s;pointer-events:none;overflow:hidden}
 .hw .hw-v.hw-on{opacity:1;transform:none}
@@ -194,7 +195,8 @@
  </tbody></table>
 </div>
 <div class="hw-v">
- <div class="hw-card"><img src="assets/av/av-09.png" alt=""><h5>Danielle B.</h5>
+ <div class="hw-h1">Talk to a student who <span class="hw-hl">has been there</span></div>
+<div class="hw-card"><img src="assets/av/av-09.png" alt=""><h5>Danielle B.</h5>
   <p>Currently at <b>Howard University</b></p><p>Studying <b>Biology</b></p><p>Graduating <b>2027</b></p><p>From <b>Baltimore, MD</b></p>
   <p class="hw-bio">First in my family to go to college. Ask me about financial aid and studying biology!</p>
   <div class="hw-tags"><span>Private College</span><span>HBCU</span></div></div>
@@ -204,6 +206,7 @@
   <div class="hw-tags"><span>Public College</span><span>AANAPISI</span></div></div>
 </div>
 <div class="hw-v hw-book">
+ <div class="hw-h1">Talk to a student who <span class="hw-hl">has been there</span></div>
  <div class="hw-who"><img src="assets/av/av-09.png" alt=""><div><b>Danielle B.</b>Howard University · Biology</div></div>
  <div class="hw-cal"><div class="hw-cap">November 2026<span><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></div>
  <div class="hw-gd"><span class="hw-w">Su</span><span class="hw-w">Mo</span><span class="hw-w">Tu</span><span class="hw-w">We</span><span class="hw-w">Th</span><span class="hw-w">Fr</span><span class="hw-w">Sa</span>
@@ -222,7 +225,7 @@ function go(n){i=n;st.forEach(function(e,k){e.classList.toggle('hw-on',k==n);});
 st.forEach(function(e){e.onclick=function(){go(+e.dataset.i)}});var q=location.search.match(/hw=(\d)/);if(q){go(+q[1]);clearTimeout(t)}else go(0)})();</script>
 </section>
 
-<section><div class="wrap"><iframe class="embed" src="embeds/mentorship-designed.html?v=s1027" title="mentorship-designed" style="height:820px" loading="lazy" scrolling="no"></iframe></div>
+<section><div class="wrap"><iframe class="embed" src="embeds/mentorship-designed.html?v=w3r2" title="mentorship-designed" style="height:820px" loading="lazy" scrolling="no"></iframe></div>
 <div class="trail-wrap"><svg class="trail" viewBox="0 0 1000 220" preserveAspectRatio="none" aria-hidden="true"><defs><mask id="trail-m" maskUnits="userSpaceOnUse"><path class="trail-draw" d="M-20 30 C 120 30, 160 110, 60 140 S 120 215, 330 200 S 700 10, 860 60 S 960 190, 1020 170" pathLength="1"/></mask></defs><path class="trail-dots" d="M-20 30 C 120 30, 160 110, 60 140 S 120 215, 330 200 S 700 10, 860 60 S 960 190, 1020 170" mask="url(#trail-m)"/></svg><div class="refer-band"><div><b>Want free advising from Trailblazer peer advisors?</b><span>Refer a school, nonprofit, or community organization and when they join Trailblazer, you get free advising!</span></div><a class="btn stk" href="#refer" data-open-refer>Refer Your School!</a></div></div></section>
 
 <section><iframe class="embed" src="embeds/peer-advisor-map.html?v=r9" title="peer-advisor-map" style="height:1189px" loading="lazy" scrolling="no"></iframe></section>
