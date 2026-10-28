@@ -354,7 +354,7 @@ img{max-width:100%;display:block}a{color:inherit}
 .ask-topics li{position:relative;padding:4px 0 4px 30px;font-size:16px;font-weight:600}
 .ask-topics li:before{content:"\2713";position:absolute;left:2px;top:2px;color:var(--green2);font-weight:800;font-size:18px}
 .ask-card{position:relative;background:#e0fce7;border:2px solid #111;border-radius:6px;box-shadow:3px 4px 0 #111;padding:26px 26px 22px;transform:rotate(-.6deg);min-height:190px;box-sizing:border-box}
-.ask-tape{position:absolute;top:-14px;left:50%;width:90px;height:26px;margin-left:-45px;background:rgba(250,204,21,.55);transform:rotate(-3deg)}
+.ask-tape{position:absolute;top:-14px;left:50%;width:90px;height:26px;margin-left:-45px;background:rgba(250,204,21,.6);transform:rotate(-3deg)}
 .ask-tag{font-family:Caveat,cursive;font-size:24px;font-weight:700;color:#08661f;margin:0 0 8px}
 .ask-q{display:flex;gap:18px;align-items:flex-start;transition:opacity .25s,transform .25s}.ask-q.out{opacity:0;transform:translateY(6px)}
 .ask-logo{width:64px;height:64px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #fff,0 2px 8px rgba(0,0,0,.15);flex:none;object-fit:cover}
