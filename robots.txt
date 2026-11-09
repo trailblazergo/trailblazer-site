@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /preview-map/
+
+Sitemap: https://welcome.trailblazergo.com/sitemap.xml
