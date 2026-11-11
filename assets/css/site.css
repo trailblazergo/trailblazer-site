@@ -590,3 +590,6 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 .auth .btn.login:hover{color:#111;background:#fff;translate:0 -2px;box-shadow:4px 6px 0 #111}
 @media(max-width:1000px){.auth .btn.login{height:36px;padding:0 12px;font-size:13px;letter-spacing:.04em}}
 @media(max-width:420px){.auth .btn.login,.auth .btn.signup{padding:0 9px;font-size:12px;letter-spacing:.02em;height:34px;box-shadow:2px 3px 0 #111}.auth{gap:7px}}
+/* auth v3: straight Sign up, aligned with Log in */
+.auth .btn.signup{transform:none}
+.auth .btn.signup:hover{transform:translateY(-2px)}
