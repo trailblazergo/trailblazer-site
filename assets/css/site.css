@@ -578,10 +578,11 @@ header .btn.dk:hover,.nav .btn.dk:hover{background:var(--green);color:#fff;borde
 
 /* w1027 sticky lift (matches about sup-card hover) */.sn,.nb-card,.ask-card{transition:border-color .2s,box-shadow .2s,transform .2s,translate .2s,background-color .5s ease;cursor:default}.sn:hover,.nb-card:hover,.ask-card:hover{translate:0 -2px;box-shadow:4px 6px 0 #111,0 10px 24px -14px rgba(8,102,31,.45)}@media(prefers-reduced-motion:reduce){.sn:hover,.nb-card:hover,.ask-card:hover{translate:none}}
 /* auth: Log in + Sign up free */
-.auth{display:flex;align-items:center;gap:14px;flex:none}
+.auth{display:flex;align-items:center;gap:14px;flex:none;margin-left:14px}
+.hdr .wrap>.nav{margin-left:auto}
 .auth .login{font-family:var(--f-work);font-weight:600;font-size:17px;color:var(--ink);text-decoration:none;white-space:nowrap;transition:color .4s}
 .auth .login:hover{color:#7b3d0e}
-.hdr .wrap>.nav{margin-left:auto;margin-right:10px}
+
 @media(max-width:1000px){.auth{margin-left:auto;gap:10px}.burger{order:3;margin-left:6px}.auth .login{font-size:15px}.auth .btn.signup{height:36px;padding:0 12px;font-size:13px;letter-spacing:.04em}}
 @media(max-width:420px){.hdr .logo img{width:120px}.auth{gap:8px}.burger{width:38px;margin-left:2px}.burger span{margin:6px 5px}}
 /* auth v2: Log in as white sticker button */
