@@ -103,7 +103,7 @@ img{max-width:100%;display:block}a{color:inherit}
 .mission h2{font-family:var(--f-sans);font-weight:700;font-size:50px;line-height:70px;margin:0 0 6px}
 .mission h2 span{color:var(--green2)}
 .mission p{font-size:18px;line-height:27px;margin:0 0 20px}
-.mission .btn{width:266px;display:flex;margin:0 auto}
+.mission .btn{width:266px;display:flex!important;margin:0 auto}
 /* join band */
 .band{background:var(--green);color:#fff;padding:38px 0}
 .band .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;max-width:940px}
